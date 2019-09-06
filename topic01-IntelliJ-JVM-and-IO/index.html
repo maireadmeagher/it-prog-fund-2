@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.23/css/uikit.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.23/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.23/js/uikit-icons.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <style>
+      
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.footer {
+  background: white;
+  text-align: right;
+}
+.content {
+  flex: 1;
+  overflow: auto;
+}
+
+
+
+    </style>
+  </head>
+  <body class="uk-background-muted">
+    <div class="wrapper">
+      <div class="content">
+        <div style="height:1000px;">
+          
+  
+  <div class="uk-offcanvas-content">
+    <div id="offcanvas-usage" uk-offcanvas>
+      <div class="uk-offcanvas-bar">
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+        
+          
+            <ul class="uk-nav">
+              <li class="uk-parent">
+                <a class="item" href="http://2018-2019.github.io/prog-fund-2//topic01-IntelliJ-JVM-and-IO/index.html">
+                  
+  <i class="fas fa-sitemap " style="color:#009688"> </i>
+1: IntelliJ and Basic I/O 
+                </a>
+                <ul class="uk-nav-sub">
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <div class="item">  
+  <i class="fas fa-bookmark " style="color:"> </i>
+ Lectures  </div>
+                              <ul class="uk-nav-sub">
+                                
+                                  <div>
+                                    <a class="item"
+                                       href="http://2018-2019.github.io/prog-fund-2//topic01-IntelliJ-JVM-and-IO/unit-01a-introduction/talk-1-introduction-jvm/a-introduction-jvm.pdf">
+  <i class="fas fa-object-group " style="color:#009688"> </i>
+Introduction 
+                                      
+                                    </a>
+                                  </div>
+                                
+                                  <div>
+                                    <a class="item"
+                                       href="http://2018-2019.github.io/prog-fund-2//topic01-IntelliJ-JVM-and-IO/unit-01a-introduction/talk-2-oo-recap/b-oo-recap.pdf">
+  <i class="fas fa-object-group " style="color:#009688"> </i>
+OO Recap 
+                                      
+                                    </a>
+                                  </div>
+                                
+                                  <div>
+                                    <a class="item"
+                                       href="http://2018-2019.github.io/prog-fund-2//topic01-IntelliJ-JVM-and-IO/unit-01a-introduction/talk-3-scanner-io/e-scanner-io.pdf">
+  <i class="fas fa-object-group " style="color:#009688"> </i>
+Scanner IO 
+                                      
+                                    </a>
+                                  </div>
+                                
+                              </ul>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <div class="item">  
+  <i class="fas fa-bookmark " style="color:"> </i>
+ Labs  </div>
+                              <ul class="uk-nav-sub">
+                                
+                                  <div>
+                                    <a class="item"
+                                       href="http://2018-2019.github.io/prog-fund-2//topic01-IntelliJ-JVM-and-IO/unit-01b-labs/talk-1-lab-intro/a-lab-intro.pdf">
+  <i class="fas fa-object-group " style="color:#009688"> </i>
+Lab Introduction 
+                                      
+                                    </a>
+                                  </div>
+                                
+                                  <div>
+                                    <a class="item"
+                                       href="http://2018-2019.github.io/prog-fund-2//topic01-IntelliJ-JVM-and-IO/unit-01b-labs/book-a-install/index.html">
+  <i class="fas fa-flask " style="color:#00BCD4"> </i>
+Lab-01a
+                                      
+                                    </a>
+                                  </div>
+                                
+                                  <div>
+                                    <a class="item"
+                                       href="http://2018-2019.github.io/prog-fund-2//topic01-IntelliJ-JVM-and-IO/unit-01b-labs/book-b/index.html">
+  <i class="fas fa-flask " style="color:#00BCD4"> </i>
+Lab-01b
+                                      
+                                    </a>
+                                  </div>
+                                
+                              </ul>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                </ul>
+              </li>
+            </ul>
+          
+        
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="uk-flex uk-flex-center uk-flex-middle uk-text-center uk-padding-small" uk-grid>
+    
+  <div class="uk-padding">
+    <a href="#offcanvas-usage" uk-toggle title="Table of Contents" pos="bottom" uk-tooltip>
+      
+  <i class="fas fa-bars fa-3x" style="color:"> </i>
+
+    </a>
+  </div>
+
+    
+  <div class="uk-width-1-2@m  uk-card uk-card-default uk-padding-small">
+    <div uk-grid>
+      <div class="uk-width-1-5@m">
+        
+          
+  
+    <i class=" fa-4x" style="color:"></i>
+  
+
+        
+      </div>
+      <div class="uk-width-expand@m uk-text-left">
+        <h2> 1: IntelliJ and Basic I/O  </h2>
+        <div class="uk-text-muted uk-text-small">
+          
+            Dr. Siobhan Drohan and Ms. Mairead Meagher, WIT
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+  <div class="uk-padding">
+    
+      
+  <li>
+    <a href="../index.html" title="To the top level Topics for this Module" pos="bottom" uk-tooltip> 
+  <i class="fas fa-home fa-4x" style="color:"> </i>
+ </a>
+  </li>
+
+      
+  </div>
+
+    
+  
+    
+  
+
+    
+      
+
+  
+    <div class="uk-card uk-card-default uk-padding-small">
+      <ul class="uk-iconnav">
+        
+        
+          
+  
+    
+      
+      
+  <li>
+    <a href="../talkwall.html" title="All slides's in module" pos="bottom" uk-tooltip> 
+  <i class="fas fa-object-group fa-2x" style="color:#009688"> </i>
+ </a>
+  </li>
+
+    
+  
+    
+      
+      
+  <li>
+    <a href="../labwall.html" title="All labs's in module" pos="bottom" uk-tooltip> 
+  <i class="fas fa-flask fa-2x" style="color:#00BCD4"> </i>
+ </a>
+  </li>
+
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+        
+      </ul>
+    </div>
+  
+
+    
+    
+  
+
+  </div>
+
+  
+  <div class="uk-container uk-padding-small">
+    
+  
+
+    
+  
+
+    
+  
+    
+  
+
+    <div class="uk-card uk-card-body uk-background-default">
+      <h3 class="uk-card-title"> Lectures  </h3>
+      <hr>
+       <div class="uk-child-width-1-4@s uk-flex uk-flex-center" uk-grid uk-height-match="target: > div > .uk-card">
+          
+            <div>
+              
+
+  
+  
+
+  <div class="uk-card uk-card-default 
+  
+    uk-card-hover
+  
+ uk-card-small uk-text-center uk-text-baseline uk-animation-fade">
+    
+  
+    
+      
+    
+    <a href=./unit-01a-introduction//talk-1-introduction-jvm/a-introduction-jvm.pdf target="_blank">
+  
+
+    
+  <div class="uk-card-header">
+    <div uk-grid>
+      <div class="uk-width-expand@m">
+        <h3> Introduction </h3>
+      </div>
+      <div class="uk-width-1-4@m">
+        
+  <i class="fas fa-object-group fa-2x" style="color:#009688"> </i>
+
+        
+      </div>
+    </div>
+  </div>
+
+    
+  <div class="uk-card-body">
+    
+      <img src="./unit-01a-introduction/talk-1-introduction-jvm/a-introduction-jvm.jpg">
+    
+  </div>
+
+    
+  
+    </a>
+  
+
+    
+  
+
+    
+  
+    <div class="uk-card-footer">
+      <p> <p>Content · Assessment · Java Virtual Machine (JVM) · bytecode · javac · main method</p></p>
+    </div>
+  
+
+    
+  
+
+  </div>
+
+
+
+            </div>
+          
+            <div>
+              
+
+  
+  
+
+  <div class="uk-card uk-card-default 
+  
+    uk-card-hover
+  
+ uk-card-small uk-text-center uk-text-baseline uk-animation-fade">
+    
+  
+    
+      
+    
+    <a href=./unit-01a-introduction//talk-2-oo-recap/b-oo-recap.pdf target="_blank">
+  
+
+    
+  <div class="uk-card-header">
+    <div uk-grid>
+      <div class="uk-width-expand@m">
+        <h3> OO Recap </h3>
+      </div>
+      <div class="uk-width-1-4@m">
+        
+  <i class="fas fa-object-group fa-2x" style="color:#009688"> </i>
+
+        
+      </div>
+    </div>
+  </div>
+
+    
+  <div class="uk-card-body">
+    
+      <img src="./unit-01a-introduction/talk-2-oo-recap/b-oo-recap.jpg">
+    
+  </div>
+
+    
+  
+    </a>
+  
+
+    
+  
+
+    
+  
+    <div class="uk-card-footer">
+      <p> <p>Objects · Classes · Constructors · Accessors · Mutators · toString</p></p>
+    </div>
+  
+
+    
+  
+
+  </div>
+
+
+
+            </div>
+          
+            <div>
+              
+
+  
+  
+
+  <div class="uk-card uk-card-default 
+  
+    uk-card-hover
+  
+ uk-card-small uk-text-center uk-text-baseline uk-animation-fade">
+    
+  
+    
+      
+    
+    <a href=./unit-01a-introduction//talk-3-scanner-io/e-scanner-io.pdf target="_blank">
+  
+
+    
+  <div class="uk-card-header">
+    <div uk-grid>
+      <div class="uk-width-expand@m">
+        <h3> Scanner IO </h3>
+      </div>
+      <div class="uk-width-1-4@m">
+        
+  <i class="fas fa-object-group fa-2x" style="color:#009688"> </i>
+
+        
+      </div>
+    </div>
+  </div>
+
+    
+  <div class="uk-card-body">
+    
+      <img src="./unit-01a-introduction/talk-3-scanner-io/e-scanner-io.jpg">
+    
+  </div>
+
+    
+  
+    </a>
+  
+
+    
+  
+
+    
+  
+    <div class="uk-card-footer">
+      <p> <p>Scanner · Console I/O</p></p>
+    </div>
+  
+
+    
+  
+
+  </div>
+
+
+
+            </div>
+          
+       </div>
+     </div>
+    <hr class="uk-divider-icon">
+  
+    
+  
+
+    <div class="uk-card uk-card-body uk-background-default">
+      <h3 class="uk-card-title"> Labs  </h3>
+      <hr>
+       <div class="uk-child-width-1-4@s uk-flex uk-flex-center" uk-grid uk-height-match="target: > div > .uk-card">
+          
+            <div>
+              
+
+  
+  
+
+  <div class="uk-card uk-card-default 
+  
+    uk-card-hover
+  
+ uk-card-small uk-text-center uk-text-baseline uk-animation-fade">
+    
+  
+    
+      
+    
+    <a href=./unit-01b-labs//talk-1-lab-intro/a-lab-intro.pdf target="_blank">
+  
+
+    
+  <div class="uk-card-header">
+    <div uk-grid>
+      <div class="uk-width-expand@m">
+        <h3> Lab Introduction </h3>
+      </div>
+      <div class="uk-width-1-4@m">
+        
+  <i class="fas fa-object-group fa-2x" style="color:#009688"> </i>
+
+        
+      </div>
+    </div>
+  </div>
+
+    
+  <div class="uk-card-body">
+    
+      <img src="./unit-01b-labs/talk-1-lab-intro/a-lab-intro.jpg">
+    
+  </div>
+
+    
+  
+    </a>
+  
+
+    
+  
+
+    
+  
+    <div class="uk-card-footer">
+      <p> <p>Java Development Kit (JDK) · bytecode · main method · Integrated Development Environment (IDE) · IntelliJ</p></p>
+    </div>
+  
+
+    
+  
+
+  </div>
+
+
+
+            </div>
+          
+            <div>
+              
+
+  
+  
+
+  <div class="uk-card uk-card-default 
+  
+    uk-card-hover
+  
+ uk-card-small uk-text-center uk-text-baseline uk-animation-fade">
+    
+  
+    
+      
+      
+    
+    <a href=./unit-01b-labs/book-a-install/index.html>
+  
+
+    
+  <div class="uk-card-header">
+    <div uk-grid>
+      <div class="uk-width-expand@m">
+        <h3> Lab-01a</h3>
+      </div>
+      <div class="uk-width-1-4@m">
+        
+  <i class="fas fa-flask fa-2x" style="color:#00BCD4"> </i>
+
+        
+      </div>
+    </div>
+  </div>
+
+    
+  <div class="uk-card-body">
+    
+      <img src="./unit-01b-labs/book-a-install/img/main.png">
+    
+  </div>
+
+    
+  
+    </a>
+  
+
+    
+  
+
+    
+  
+    <div class="uk-card-footer">
+      <p> <p>Install JDK 11 + IntelliJ Idea (on own computer)</p></p>
+    </div>
+  
+
+    
+  
+
+  </div>
+
+
+
+            </div>
+          
+            <div>
+              
+
+  
+  
+
+  <div class="uk-card uk-card-default 
+  
+    uk-card-hover
+  
+ uk-card-small uk-text-center uk-text-baseline uk-animation-fade">
+    
+  
+    
+      
+      
+    
+    <a href=./unit-01b-labs/book-b/index.html>
+  
+
+    
+  <div class="uk-card-header">
+    <div uk-grid>
+      <div class="uk-width-expand@m">
+        <h3> Lab-01b</h3>
+      </div>
+      <div class="uk-width-1-4@m">
+        
+  <i class="fas fa-flask fa-2x" style="color:#00BCD4"> </i>
+
+        
+      </div>
+    </div>
+  </div>
+
+    
+  <div class="uk-card-body">
+    
+      <img src="./unit-01b-labs/book-b/img/main.png">
+    
+  </div>
+
+    
+  
+    </a>
+  
+
+    
+  
+
+    
+  
+    <div class="uk-card-footer">
+      <p> <p>IntelliJ · Java Virtual Machine (JVM) · main method · Scanner · OO recap</p></p>
+    </div>
+  
+
+    
+  
+
+  </div>
+
+
+
+            </div>
+          
+       </div>
+     </div>
+    <hr class="uk-divider-icon">
+  
+
+    
+  <div class="uk-container uk-padding-small">
+    <div class="uk-child-width-1-4@s uk-flex uk-flex-center" uk-grid uk-height-match="target: > div > .uk-card">
+      
+    </div>
+  </div>
+
+    <hr class="uk-divider-icon">
+  </div>
+
+
+        </div>
+      </div>
+      <div class="footer uk-text-small uk-text-right uk-text-muted"> Powered by <a
+          href="https://github.com/edeleastar/tutors-ts">tutors-ts.</a>
+        
+      </div>
+    </div>
+  </body>
+</html>

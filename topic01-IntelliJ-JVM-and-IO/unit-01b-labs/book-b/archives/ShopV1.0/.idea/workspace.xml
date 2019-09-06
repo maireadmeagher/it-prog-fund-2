@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c2b2d1f8-2df4-4deb-aa26-5cdd95a2cd84" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../../new layout maybe.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../new layout maybe.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../private-site-uk/archivewall.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../private-site-uk/archivewall.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../private-site-uk/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../private-site-uk/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../private-site-uk/labwall.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../private-site-uk/labwall.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../private-site-uk/talkwall.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../private-site-uk/talkwall.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../private-site-uk/topic00-assignments/book-a/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../private-site-uk/topic00-assignments/book-a/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../private-site-uk/topic00-assignments/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../private-site-uk/topic00-assignments/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../private-site-uk/topic01-IntelliJ-JVM-and-IO/book-b/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../private-site-uk/topic01-IntelliJ-JVM-and-IO/book-b/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../private-site-uk/topic01-IntelliJ-JVM-and-IO/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../private-site-uk/topic01-IntelliJ-JVM-and-IO/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../private-site-uk/topic01-IntelliJ-JVM-and-IO/talk-2-main-and-jvm/b-main-and-JVM.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../private-site-uk/topic01-IntelliJ-JVM-and-IO/talk-2-main-and-jvm/b-main-and-JVM.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../private-site-uk/topic01-IntelliJ-JVM-and-IO/talk-3-intellij/c-intellij.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../private-site-uk/topic01-IntelliJ-JVM-and-IO/talk-3-intellij/c-intellij.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../private-site-uk/topic01-IntelliJ-JVM-and-IO/talk-4-oo-recap/d-oo-recap.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../private-site-uk/topic01-IntelliJ-JVM-and-IO/talk-4-oo-recap/d-oo-recap.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../private-site-uk/topic01-IntelliJ-JVM-and-IO/talk-5-scanner-io/e-scanner-io.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../private-site-uk/topic01-IntelliJ-JVM-and-IO/talk-5-scanner-io/e-scanner-io.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../private-site-uk/topic02-grouping-objects/book-1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../private-site-uk/topic02-grouping-objects/book-1/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../private-site-uk/topic02-grouping-objects/book-2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../private-site-uk/topic02-grouping-objects/book-2/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../private-site-uk/topic02-grouping-objects/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../private-site-uk/topic02-grouping-objects/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../private-site-uk/topic03-menu-and-crud/book-1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../private-site-uk/topic03-menu-and-crud/book-1/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../private-site-uk/topic03-menu-and-crud/book-2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../private-site-uk/topic03-menu-and-crud/book-2/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../private-site-uk/topic03-menu-and-crud/book-3/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../private-site-uk/topic03-menu-and-crud/book-3/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../private-site-uk/topic03-menu-and-crud/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../private-site-uk/topic03-menu-and-crud/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../private-site-uk/topic05-persistence-xml-exceptions/book/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../private-site-uk/topic05-persistence-xml-exceptions/book/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../private-site-uk/topic05-persistence-xml-exceptions/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../private-site-uk/topic05-persistence-xml-exceptions/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../private-site-uk/topic06-collections-map-set/book/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../private-site-uk/topic06-collections-map-set/book/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../private-site-uk/topic06-collections-map-set/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../private-site-uk/topic06-collections-map-set/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../private-site-uk/topic07-inher-polym/book/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../private-site-uk/topic07-inher-polym/book/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../private-site-uk/topic07-inher-polym/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../private-site-uk/topic07-inher-polym/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../private-site-uk/topic08-abstraction/book/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../private-site-uk/topic08-abstraction/book/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../private-site-uk/topic08-abstraction/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../private-site-uk/topic08-abstraction/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../private-site-uk/topic09-TDD and JUnit/book/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../private-site-uk/topic09-TDD and JUnit/book/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../private-site-uk/topic09-TDD and JUnit/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../private-site-uk/topic09-TDD and JUnit/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../private-site-uk/topic10-abstraction and interfaces/book/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../private-site-uk/topic10-abstraction and interfaces/book/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../private-site-uk/topic10-abstraction and interfaces/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../private-site-uk/topic10-abstraction and interfaces/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../private-site-uk/topic11-additional-material/book-1-shopv6/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../private-site-uk/topic11-additional-material/book-1-shopv6/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../private-site-uk/topic11-additional-material/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../private-site-uk/topic11-additional-material/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Week07-IntelliJ-JVM-OO-IO.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Week07-Introduction.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/00.Lab-01a.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/01.01.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/02.02.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/03.03.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/09.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/31.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/58.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/07.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/21.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/22.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/23.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/25.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/27.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/28.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/29.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/33.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/34.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/35.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/36.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/37.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/39.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/40.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/41.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/43.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/44.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/45.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/46.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/47.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/48.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/49.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/50.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/52.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/53.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/54.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/55.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/57.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/59.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/60.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/61.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/62.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/63.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/64.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/65.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/66.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../book-a-setup-intellij/img/obsolete/67.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../00.Lab-07b.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../01.HelloWorld.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../01.HelloWorld.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../02.ShopV1.0.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../02.ShopV1.0.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03.Exercise.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../03.Exercise.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AngleProject/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AngleProject/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AngleProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AngleProject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AngleProject/out/production/AngleProject/Angle.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AngleProject/out/production/AngleProject/Angle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloWorld/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HelloWorld/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloWorld/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HelloWorld/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloWorld/out/production/HelloWorld/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../HelloWorld/out/production/HelloWorld/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../img/17.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/../../img/17.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../img/18.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../img/18.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../img/19.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../img/19.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../img/20.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../img/20.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../img/21.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../img/21.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../img/22.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../img/22.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../img/23.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../img/23.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../img/24.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../img/24.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../img/25.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../img/25.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../img/ide01.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../img/ide02.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../img/ide03.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../img/ide04.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../img/ide05.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../img/ide06.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../img/ide07.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../img/ide08.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../img/ide09.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../img/ide10.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../img/ide11.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../img/ide12.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/../../img/ide12.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../img/ide13.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/../../img/ide13.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../img/ide14.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/../../img/ide14.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../img/ide15.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/../../img/ide15.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../img/ide16.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/../../img/ide16.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../img/ide17.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/../../img/ide17.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../img/ide18.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/../../img/ide18.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../img/ide19.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/../../img/ide19.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../img/ide22.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/../../img/ide22.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../img/jdk01.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../img/jdk02.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../img/jdk03.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../img/jdk04.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../img/jdk05.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../img/jdk06.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../talk-1-remaining-weeks/a-remaining-weeks.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../talk-1-remaining-weeks/a-remaining-weeks.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../talk-1-remaining-weeks/a-remaining-weeks.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../talk-1-remaining-weeks/a-remaining-weeks.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../talk-2-main-and-jvm/b-main-and-JVM.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../talk-2-main-and-jvm/b-main-and-JVM.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../talk-2-main-and-jvm/b-main-and-JVM.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../talk-2-main-and-jvm/b-main-and-JVM.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../talk-3-intellij/c-intellij.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../talk-3-intellij/c-intellij.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../talk-3-intellij/c-intellij.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../talk-3-intellij/c-intellij.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../talk-4-oo-recap/d-oo-recap.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../talk-4-oo-recap/d-oo-recap.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../talk-4-oo-recap/d-oo-recap.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../talk-4-oo-recap/d-oo-recap.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../talk-5-scanner-io/e-scanner-io.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../talk-5-scanner-io/e-scanner-io.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../talk-5-scanner-io/e-scanner-io.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../talk-5-scanner-io/e-scanner-io.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../topic.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../topic.md" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1049788766">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Driver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" selection-end-line="39" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Product.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="2" selection-end-line="106" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/Driver.java" />
+        <option value="$PROJECT_DIR$/src/Product.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="20" />
+    <option name="y" value="40" />
+    <option name="width" value="1778" />
+    <option name="height" value="1020" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ShopV1.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ShopV1.0" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ShopV1.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ShopV1.0" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Default">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="ShopV1.0" type="cbb8eebc:String" user="ShopV1.0" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="ShopV1.0" type="cbb8eebc:String" user="ShopV1.0" />
+              <item name=".idea" type="cbb8eebc:String" user=".idea" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="ShopV1.0" type="cbb8eebc:String" user="ShopV1.0" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ShopV1.0" type="58d84e3e:PackageViewProjectNode" />
+              <item name="ShopV1.0" type="616d4139:PackageViewModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537370105970" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Driver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Driver" />
+      <module name="ShopV1.0" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Driver" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",VISIBILITY_SORTER" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c2b2d1f8-2df4-4deb-aa26-5cdd95a2cd84" name="Default" comment="" />
+      <created>1518639140052</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1518639140052</updated>
+      <workItem from="1537370070449" duration="39000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="39000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-6" y="-6" width="1381" height="885" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18367347" />
+      <window_info id="Structure" order="1" weight="0.23203126" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32847682" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Driver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-end-line="39" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2" selection-end-line="106" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>ShopV1</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
