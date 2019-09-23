@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css"
+          type="text/css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"
+          rel="stylesheet"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      
+
+body {
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+  font-size:90%;
+  color: black;
+}
+
+p {
+  margin: 0.5em;
+}
+
+pre code {
+  font-family: "Monaco";
+  font-size: 100%;
+}
+
+img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin:10px;
+}
+
+h1, h2, h3 {
+  border-bottom:thin solid black;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+h1 {
+  font-style:italic;
+  font-size:130%;
+}
+
+h2 {
+  font-size:110%;
+}
+
+h3 {
+  font-size:100%;
+}
+
+
+
+      
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.footer {
+  background: white;
+  text-align: right;
+}
+.content {
+  flex: 1;
+  overflow: auto;
+}
+
+
+
+    </style>
+  </head>
+
+  
+  
+
+  <div class="ui fixed top pointing inverted stackable menu labmenu">
+    <header class="header item">
+      <i id="toc" class="sitemap icon"></i>
+      
+        <a href="../../index.html"> Labs  </a>
+      
+    </header>
+    <div class="right tab-menu menu">
+      
+        <a class="item" data-tab="ShopV6.0">
+          ShopV6.0
+        </a>
+      
+        <a class="item" data-tab="Packages">
+          Packages
+        </a>
+      
+        <a class="item" data-tab="ScannerInput">
+          ScannerInput
+        </a>
+      
+        <a class="item" data-tab="Solution">
+          Solution
+        </a>
+      
+    </div>
+  </div>
+
+
+  
+
+  <div class="ui pushable">
+    <div class="ui inverted labeled icon left inline vertical sidebar menu">
+      <br><br>
+      
+        
+          
+            <a class="item"
+               href="/topic00-assignments/book-a/index.html">Assignment1 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic00-assignments/book-b/index.html">Assignment2 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic00-assignments/book-c/index.html">RepeatAssignment </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic01-IntelliJ-JVM-and-IO/unit-01b-labs/book-a-install/index.html">Lab-01a </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic01-IntelliJ-JVM-and-IO/unit-01b-labs/book-b-example/index.html">Lab-01b </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic02-primitive-arrays/unit-02b-labs/book-1-array-exercises/index.html">Lab-02a </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic02-primitive-arrays/unit-02b-labs/book-2-shop-v2.x/index.html">Lab-02b </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic03-arraylists/unit-03b-labs/book-1-arraylists/index.html">Lab-03 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic04-menu-and-crud/unit-04b-labs/book-1-loop-exercises/index.html">Lab-04a </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic04-menu-and-crud/unit-04b-labs/book-2-crud/index.html">Lab-04b </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic05-persistence-xml-exceptions/unit-05b-labs/book-xml-exceptions/index.html">Lab-05 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic06-collections-map-set/unit-06b-labs/book/index.html">Lab-06 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic07-inher-polym/unit-07b-labs/book/index.html">Lab-07 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic08-abstraction/unit-08b-labs/book-1-abstraction/index.html">Lab-08 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic09-interfaces/unit-09b-labs/book-interfaces/index.html">Lab-09 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic10-TDD-and-JUnit/unit-10b-labs/book-tdd/index.html">Lab-10 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic11-additional-material/unit-11b-labs/book-1-shopv6/index.html">ShopV6.0 </a>
+          
+        
+      
+    </div>
+    <div class="pusher" tabindex="-1">
+      <div class="ui basic segment">
+        <br>
+        
+          <div class="ui tab segment lab" data-tab="ShopV6.0">
+            <h1>Objectives</h1>
+<p>Packages · Utilities · Parsing · ShopV6.0</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Packages">
+            <h1>ShopV6.0 (using packages)</h1>
+<p>In this step, you will download ShopV5.0 and use it to create a models-controllers-utils package structure for ShopV6.0. </p>
+<h2>Downloading ShopV5.0 Project</h2>
+<p>Download <a href="archives/ShopV5.0.zip">ShopV5.0</a>.  The structure of this project is like so:</p>
+<p><img src="./img/00.png" alt="ShopV5.0 project structure"> </p>
+<h2>Creating ShopV6.0 Project</h2>
+<p>In IntelliJ, create a new project called ShopV6.0.</p>
+<p>To do this, right-click on the <strong>src</strong> folder and select <strong>New</strong>, followed by <strong>Package</strong>.  Enter “models” as the package name.</p>
+<p>Repeat this process to create two more packages: “controllers” and “utils”.</p>
+<p>Copy the ShopV5.0 files into the ShopV6.0 project to the locations specified in the screen shot below (remember to copy in xstream too).</p>
+<p><img src="./img/01.png" alt="ShopV6.0 project structure"> </p>
+<p>When we have copied all the existing code to this new format, you can see above that we have errors!  </p>
+<p>The problem is that the Product class cannot be found in the Driver and the Store classes (because they are stored in a different package):</p>
+<p><img src="./img/02.png" alt="ShopV6.0 Errors"> </p>
+<p>To fix this, we need to <strong>import models.product;</strong> into both the Driver and Store.  And <strong>import utils.ScannerInput;</strong> into the Driver. Hint: You can use the Alt+Enter functionality to fix this. </p>
+<p>The errors should now be gone:</p>
+<p><img src="./img/03.png" alt="ShopV6.0 project structure"> </p>
+<h2>Testing the app</h2>
+<ul>
+<li>Run the app to make sure that all works ok.</li>
+</ul>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="ScannerInput">
+            <h1>ShopV6.0 (updating ScannerInput class)</h1>
+<p>In this step, you will continue working on ShopV6.0 and add more methods to the ScannerInput class (we first encountered this in the XML persistence lab).</p>
+<h2>ScannerInput class</h2>
+<p>Currently our ScannerInput class looks like this:</p>
+<pre><code class="lang-java">package utils;
+
+import java.util.Scanner;
+
+public class ScannerInput {
+
+    public static int readNextInt(String prompt) {
+        do {
+            var scanner = new Scanner(System.in);
+            try {
+                System.out.print(prompt);
+                return Integer.parseInt(scanner.next());
+            }
+            catch (NumberFormatException e) {
+                System.err.println(&quot;\tEnter a number please.&quot;);
+            }
+        }  while (true);
+    }
+
+    public static double readNextDouble(String prompt) {
+        do {
+            var scanner = new Scanner(System.in);
+            try{
+                System.out.print(prompt);
+                return Double.parseDouble(scanner.next());
+            }
+            catch (NumberFormatException e) {
+                System.err.println(&quot;\tEnter a number please.&quot;);
+            }
+        }  while (true);
+    }
+}</code></pre>
+<p>We are using it to read <em>int</em> and <em>double</em> data from the console.  </p>
+<p>However we are then using, in the Driver class, the standard <em>Scanner</em> to read <em>String</em> and <em>char</em> data e.g.:</p>
+<pre><code class="lang-java">
+    //instance field
+    private Scanner input = new Scanner(System.in);
+
+    //sample console read of String data
+    System.out.print(&quot;Enter the Product Name:  &quot;);
+    String productName = input.nextLine();</code></pre>
+<p>We will now update the <em>ScannerInput</em> class to read <strong>ALL</strong> input from the user.  We can then remove the <em>Scanner</em> class declaration in from the Driver class and use <em>ScannerInput</em> throughout instead.</p>
+<h2>Reading a String</h2>
+<p>Add the following method to the ScannerInput class (note, we do not have to do any validation on the String input):</p>
+<pre><code class="lang-java">    public static String validNextLine(String prompt) {
+        Scanner input = new Scanner(System.in);
+        System.out.print(prompt);
+        return input.nextLine();
+    }</code></pre>
+<p>Now return to your Driver class and replace all <em>input.nextLine()</em> reads with this <em>ScannerInput.validNextLine</em> read.  For example, the following read:</p>
+<pre><code class="lang-java">    //sample console read of String data
+    System.out.print(&quot;Enter the Product Name:  &quot;);
+    String productName = input.nextLine();</code></pre>
+<p>would be replaced with:</p>
+<pre><code class="lang-java">String productName = ScannerInput.validNextLine(&quot;Enter the Product Name:  &quot;);</code></pre>
+<h2>Reading a char</h2>
+<p>We will now repeat this process for reading a <em>char</em>.</p>
+<p>Add the following method to the ScannerInput class (note, we do not have to do any validation on the char input):</p>
+<pre><code class="lang-java">    public static char validNextChar(String prompt) {
+        Scanner input = new Scanner(System.in);
+        System.out.print(prompt);
+        return input.next().charAt(0);
+    }</code></pre>
+<p>Now return to your Driver class and replace all <em>input.next().charAt(0)</em> reads with this <em>ScannerInput.validNextChar</em> read.  For example, the following read:</p>
+<pre><code class="lang-java">    //sample console read of String data
+System.out.print(&quot;Is this product in your current line (y/n): &quot;);
+        char currentProduct = input.next().charAt(0);</code></pre>
+<p>would be replaced with:</p>
+<pre><code class="lang-java">char currentProduct = ScannerInput.validNextChar(&quot;Is this product in your current line (y/n): &quot;);</code></pre>
+<h2>Scanner</h2>
+<p>Now delete the Scanner object from your Driver class.  Once you have replaced all of the Scanner object reads, you should get no error here.</p>
+<h2>Testing the app</h2>
+<p>Run the app to make sure that all works ok.</p>
+<p>When testing the app, you might notice that some dummy reads for emptying the buffer are now causing a problem!</p>
+<p>We can get rid of these now and, as we are creating a new Scanner object for each console read, we don’t have to worry about emptying our buffers anymore! </p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Solution">
+            <h1>Solution</h1>
+<p>The solution for ShopV6.0 is <a href="archives/ShopV6.0.zip">available here</a>.</p>
+
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+  <br>
+  <script>
+    $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+    $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+  </script>
+
+
+
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right small menu">
+      <div class="ui tiny basic message segment">
+         Powered by <a href="https://github.com/edeleastar/tutors-ts">tutors-ts.</a> 
+      </div>
+    </div>
+  </div>
+
+  </body>
+
+</html>

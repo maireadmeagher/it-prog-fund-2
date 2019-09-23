@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css"
+          type="text/css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"
+          rel="stylesheet"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      
+
+body {
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+  font-size:90%;
+  color: black;
+}
+
+p {
+  margin: 0.5em;
+}
+
+pre code {
+  font-family: "Monaco";
+  font-size: 100%;
+}
+
+img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin:10px;
+}
+
+h1, h2, h3 {
+  border-bottom:thin solid black;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+h1 {
+  font-style:italic;
+  font-size:130%;
+}
+
+h2 {
+  font-size:110%;
+}
+
+h3 {
+  font-size:100%;
+}
+
+
+
+      
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.footer {
+  background: white;
+  text-align: right;
+}
+.content {
+  flex: 1;
+  overflow: auto;
+}
+
+
+
+    </style>
+  </head>
+
+  
+  
+
+  <div class="ui fixed top pointing inverted stackable menu labmenu">
+    <header class="header item">
+      <i id="toc" class="sitemap icon"></i>
+      
+        <a href="../index.html">  Assignments   </a>
+      
+    </header>
+    <div class="right tab-menu menu">
+      
+        <a class="item" data-tab="Assignment1">
+          Assignment1
+        </a>
+      
+        <a class="item" data-tab="01">
+          01
+        </a>
+      
+        <a class="item" data-tab="02">
+          02
+        </a>
+      
+        <a class="item" data-tab="Artist">
+          Artist
+        </a>
+      
+        <a class="item" data-tab="ArtistList">
+          ArtistList
+        </a>
+      
+        <a class="item" data-tab="Song">
+          Song
+        </a>
+      
+        <a class="item" data-tab="SongList">
+          SongList
+        </a>
+      
+        <a class="item" data-tab="Driver">
+          Driver
+        </a>
+      
+        <a class="item" data-tab="Truncating">
+          Truncating
+        </a>
+      
+        <a class="item" data-tab="JUnit">
+          JUnit
+        </a>
+      
+        <a class="item" data-tab="Submitting">
+          Submitting
+        </a>
+      
+        <a class="item" data-tab="IndicativeMarkingScheme">
+          IndicativeMarkingScheme
+        </a>
+      
+    </div>
+  </div>
+
+
+  
+
+  <div class="ui pushable">
+    <div class="ui inverted labeled icon left inline vertical sidebar menu">
+      <br><br>
+      
+        
+          
+            <a class="item"
+               href="/topic00-assignments/book-a/index.html">Assignment1 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic00-assignments/book-b/index.html">Assignment2 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic00-assignments/book-c/index.html">RepeatAssignment </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic01-IntelliJ-JVM-and-IO/unit-01b-labs/book-a-install/index.html">Lab-01a </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic01-IntelliJ-JVM-and-IO/unit-01b-labs/book-b-example/index.html">Lab-01b </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic02-primitive-arrays/unit-02b-labs/book-1-array-exercises/index.html">Lab-02a </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic02-primitive-arrays/unit-02b-labs/book-2-shop-v2.x/index.html">Lab-02b </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic03-arraylists/unit-03b-labs/book-1-arraylists/index.html">Lab-03 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic04-menu-and-crud/unit-04b-labs/book-1-loop-exercises/index.html">Lab-04a </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic04-menu-and-crud/unit-04b-labs/book-2-crud/index.html">Lab-04b </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic05-persistence-xml-exceptions/unit-05b-labs/book-xml-exceptions/index.html">Lab-05 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic06-collections-map-set/unit-06b-labs/book/index.html">Lab-06 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic07-inher-polym/unit-07b-labs/book/index.html">Lab-07 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic08-abstraction/unit-08b-labs/book-1-abstraction/index.html">Lab-08 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic09-interfaces/unit-09b-labs/book-interfaces/index.html">Lab-09 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic10-TDD-and-JUnit/unit-10b-labs/book-tdd/index.html">Lab-10 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic11-additional-material/unit-11b-labs/book-1-shopv6/index.html">ShopV6.0 </a>
+          
+        
+      
+    </div>
+    <div class="pusher" tabindex="-1">
+      <div class="ui basic segment">
+        <br>
+        
+          <div class="ui tab segment lab" data-tab="Assignment1">
+            <h1>Readme</h1>
+<p>Based on materials contained in the first 5 topics of slide decks and labs.  It is worth 50% of your overall grade for the module.  </p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="01">
+            <h1>Similar(ish) Project</h1>
+<p>In your previous labs, you worked on a Shop project.  Your assignment will be similar(ish) to this project but will incorporate more concepts and require you to develop your own algorithms to solve some of the requirements given to you.</p>
+<p>The solution to the Shop V5.0 project can be found <a href="archives/ShopV5.0.zip">here</a>.</p>
+<p><img src="img/01.png" alt="Figure 1: Class Diagram for Shop Project"></p>
+<p>The <em>responsibility</em> of the <em>Product</em> class is to manage a single product. </p>
+<p>The <em>responsibility</em> of the <em>Store</em> class is to manage an ArrayList of Products.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="02">
+            <h1>The Assignment</h1>
+<p>You are tasked with developing a <em>SongifyApp</em>.  </p>
+<p>This <em>SongifyApp</em> will have five classes:</p>
+<ul>
+<li><p><em>Artist</em>:  The responsibility for this class is to manage a single Artist. </p>
+</li>
+<li><p><em>ArtistList</em>: The responsibility for this class is to store and manage ALL the artists entered by the user via the console.</p>
+</li>
+<li><p><em>Song</em>:  The responsibility for this class is to manage a single Song.  Note that a song, in our app, has ONE artist associated with it. </p>
+</li>
+<li><p><em>SongList</em>: The responsibility for this class is to store and manage ALL the songs entered by the user via the console.</p>
+</li>
+<li><p><em>Driver</em>: The responsibility for this class is to manage the User Interface (UI) i.e. the menu and user input/ouput.</p>
+</li>
+</ul>
+<p>The instructions for developing the app and the above classes are on the following tabs. </p>
+<h2>Some key points to remember when coding your assignment</h2>
+<ul>
+<li><p>You <strong>must</strong> use the names given for the Classes and Methods; failure to do so will result in reduced marks.</p>
+</li>
+<li><p>For all variables, methods and classes used, please adhere to the naming standards discussed in class.</p>
+</li>
+<li><p>Use internal, helper methods (i.e. private access methods) where appropriate.  The interface for your class <strong>must</strong> match the interface given in the assignment brief.  Deviating from the interface will result in reduced marks.  Note: the interface here refers to the fields, constructors and methods that are visible outside the class. </p>
+</li>
+<li><p>Your classes and methods should be Javadoc commented.</p>
+</li>
+<li><p>Don&#39;t forget that you can get IntelliJ to generate methods such as getters, setters, constructors and toString.  It is a good idea to generate these methods and then add the additional requirements (such as validation) manually.  This will free up some time for concentrating on other areas of the assignment. </p>
+</li>
+<li><p>There should be absolutely <em>NO</em> <strong>System.out.println</strong> or <strong>Scanner</strong> reads in any class except for Driver.  If you have any such interaction with the user in any class other than Driver, you will loose marks.  Instead, you should be returning information back to Driver to print it.  Or passing information read in Driver to other classes via method parameters.</p>
+</li>
+</ul>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Artist">
+            <h1>Artist class</h1>
+<p>The UML for the Artist class is here:</p>
+<p><img src="img/02.png" alt=""></p>
+<p>The responsibility for this class is to manage a single Artist. </p>
+<h2>Fields</h2>
+<p>There are three private fields in the Artist class.  The validation on these fields is as follows:</p>
+<ul>
+<li><p><em>artistName</em>: The artist name is maximum 30 characters.</p>
+</li>
+<li><p><em>artistEmail</em>:  must contain a <strong><em>@</em></strong> and a <strong><em>.</em></strong>.  If it doesn&#39;t, store &quot;invalid format email&quot;.</p>
+</li>
+<li><p><em>artistPhone</em>: should only contain numbers.  If it contains any characters other than numbers, store &quot;unknown&quot;.</p>
+</li>
+</ul>
+<h2>Constructor</h2>
+<p>There is one constructor that should have the same method signature as the diagram above.  The constructor should enforce the validation rules outlined for each field above.</p>
+<h2>Methods (getters and setters)</h2>
+<p>Each of the above fields will have a getter and a setter.  The setters should adhere to the validation rules outlined above.  Remember that a setter should not apply a default value i.e. if an invalid email is entered, do not overwrite the existing stored email with &quot;invalid format email&quot;.</p>
+<h2>Methods (toString)</h2>
+<p>Your toString should adhere to the following format:</p>
+<p><img src="img/07.png" alt=""></p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="ArtistList">
+            <h1>ArtistList class</h1>
+<p>The UML for the ArtistList class is here:</p>
+<p><img src="img/03.png" alt=""></p>
+<h2>Fields</h2>
+<p>There is one private field in the ArtistList class, <em>artists</em>.  This is an ArrayList of Artist.  There is no validation on this field.  It should be instantiated at declaration time.  </p>
+<h2>Constructor</h2>
+<p>We will use the default constructor for this class (no need to code it).  For this reason, there is no constructor shown in the diagram above.</p>
+<h2>Methods (getters and setters)</h2>
+<p>There are no getter or setter for the instance field <em>artists</em>.  Instead, we will use the below methods to manage the ArrayList.</p>
+<h2>Methods (addArtist)</h2>
+<p>This method will add an Artist object (passed as a parameter) to the ArrayList <em>artists</em>.  There is no validation in this method.</p>
+<h2>Methods (getArtist)</h2>
+<p>This method will return an Artist object at the location <em>index</em>, which is passed as a paramter.  There is some validation in this method:</p>
+<ul>
+<li>Check that the passed index exists in the ArrayList, before accessing the ArrayList.</li>
+<li>If the passed index is not valid, return <em>null</em>. </li>
+</ul>
+<h2>Methods (numberOfArtists)</h2>
+<p>This method returns the number of Artist objects stored in the ArrayList <em>artists</em>.</p>
+<h2>Methods (removeArtist)</h2>
+<p>This method removes an Artist object at the location <em>index</em>, which is passed as a paramter.  There is some validation in this method (same as in getArtist method above):</p>
+<ul>
+<li>Check that the passed index exists in the ArrayList, before accessing the ArrayList.</li>
+<li>If the passed index is not valid, return <em>false</em>. </li>
+</ul>
+<h2>Methods (listOfArtists)</h2>
+<p>This method is similar-ish to a toString.<br>It builds (and returns) a String of all Artist objects in the ArrayList.  Each object is on a new line.  The beginning of the line has the index number of the object in the ArrayList i.e.:</p>
+<p><img src="img/08.png" alt=""></p>
+<p>If there are no artists in the ArrayList, the following message should be returned:  <strong>There are no artists in the list</strong>.</p>
+<h2>Methods (save)</h2>
+<p>This method saves all Artist objects from the ArrayList artists to an XML file <em>artists.xml</em>.  You can use the <em>xstream</em> component for this (like we did in class) or any approach you wish.</p>
+<h2>Methods (load)</h2>
+<p>This method loads all saved Artist objects back into the program (i.e into the ArrayList artists) from the XML file <em>artists.xml</em>.  You can use the <em>xstream</em> component for this (like we did in class) or any approach you wish.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Song">
+            <h1>Song class</h1>
+<p>The UML for the Song class is here:</p>
+<p><img src="img/04.png" alt=""></p>
+<p>The responsibility for this class is to manage a single Song. </p>
+<h2>Fields</h2>
+<p>There are four private fields in the Song class.  The validation on these fields is as follows:</p>
+<ul>
+<li><p><em>songName</em>: The song name is maximum 30 characters.</p>
+</li>
+<li><p><em>songGenre</em>: must be one of the following:</p>
+<ul>
+<li>Rock</li>
+<li>Pop</li>
+<li>Blues</li>
+<li>Rap</li>
+<li>Dance</li>
+<li>Classical</li>
+<li>unknown (if any of the above hasn&#39;t be entered by the user)</li>
+</ul>
+</li>
+<li><p><em>songLength</em>: stored as seconds.  Must be between 10 and 1,200 inclusive.  If it is outside of this range, a default of 0 is applied.</p>
+</li>
+<li><p><em>artist</em>: as we cannot have a null value stored in this variable, we will do the following validation on it:</p>
+<ul>
+<li>if the artist is not null, store this value.</li>
+<li>if the artist IS null, create a new artist object with an artist name of <em>unknown</em>, an email of <em>invalid format email</em>, and a phone of <em>unknown</em>.</li>
+</ul>
+</li>
+</ul>
+<h2>Constructor</h2>
+<p>There is one constructor that should have the same method signature as the diagram above.  The constructor should enforce the validation rules outlined for each field above.</p>
+<h2>Methods (getters and setters)</h2>
+<p>Each of the above fields will have a getter and a setter.  The setters should adhere to the validation rules outlined above.  Remember that a setter should not apply a default value i.e. if an invalid genre is entered, do not overwrite the existing stored genre with &quot;unknown&quot;.</p>
+<h2>Methods (toString)</h2>
+<p>Your toString should adhere to the following format:</p>
+<p><img src="img/09.png" alt=""></p>
+<p>Note how the song length is not displayed in seconds...it is converted to minutes and seconds.  Hint: use modulo operator (%) for this.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="SongList">
+            <h1>SongList Class</h1>
+<p>The UML for the SongList class is here:</p>
+<p><img src="img/05.png" alt=""></p>
+<p>Note: There are a lot of similarities, structure-wise, between ArtistList and SongList. </p>
+<h2>Fields</h2>
+<p>There is one private field in the SongList class, <em>songs</em>.  This is an ArrayList of Songs.  There is no validation on this field.  It should be instantiated at declaration time.  </p>
+<h2>Constructor</h2>
+<p>We will use the default constructor for this class (no need to code it).  For this reason, there is no constructor shown in the diagram above.</p>
+<h2>Methods (getters and setters)</h2>
+<p>There are no getter or setter for the instance field <em>songs</em>.  Instead, we will use the below methods to manage the ArrayList.</p>
+<h2>Methods (addSong)</h2>
+<p>This method will add a Song object (passed as a parameter) to the ArrayList <em>songs</em>.  There is no validation in this method.</p>
+<h2>Methods (getSong)</h2>
+<p>This method will return an Song object at the location <em>index</em>, which is passed as a paramter.  There is some validation in this method:</p>
+<ul>
+<li>Check that the passed index exists in the ArrayList, before accessing the ArrayList.</li>
+<li>If the passed index is not valid, return <em>null</em>. </li>
+</ul>
+<h2>Methods (removeSong)</h2>
+<p>This method removes a Song object at the location <em>index</em>, which is passed as a paramter.  There is some validation in this method (same as in getArtist method in the ArtistList class):</p>
+<ul>
+<li>Check that the passed index exists in the ArrayList, before accessing the ArrayList.</li>
+<li>If the passed index is not valid, return <em>false</em>. </li>
+</ul>
+<h2>Methods (numberOfSongs)</h2>
+<p>This method returns the number of Song objects stored in the ArrayList <em>songs</em>.</p>
+<h2>Methods (listOfSongs)</h2>
+<p>This method is similar-ish to a toString.<br>It builds (and returns) a String of all Song objects in the ArrayList.  Each object is on a new line.  The beginning of the line has the index number of the object in the ArrayList i.e.:</p>
+<p><img src="img/10.png" alt=""></p>
+<p>If there are no songs in the ArrayList, the following message should be returned:  <strong>There are no songs in the list</strong>.</p>
+<h2>Methods (listSongsBySpecificGenre)</h2>
+<p>This method builds (and returns) a String of all Song objects in the ArrayList whose <em>genre</em> matches the one passed as a parameter.  Each object is on a new line i.e.:</p>
+<p><img src="img/11.png" alt=""></p>
+<p>If there are no songs in the ArrayList, the following message should be returned:  <strong>There are no songs stored in the list</strong>.</p>
+<p>If there are songs in the ArrayList but none of them have the genre entered by the user (i.e. passed as a parameter), then the following message should be returned:  <strong>&quot;There are no songs with the genre: &quot; + genre</strong></p>
+<p>Note: cater for case sensitivity in your searches i.e. Rock, ROCK, rock should be the same for search purposes (see screen shot above). </p>
+<h2>Methods (listSongsBySpecificArtist)</h2>
+<p>This method builds (and returns) a String of all Song objects in the ArrayList whose <em>artistName</em> matches the one passed as a parameter.  Each object is on a new line i.e.:</p>
+<p><img src="img/12.png" alt=""></p>
+<p>If there are no songs in the ArrayList, the following message should be returned:  <strong>There are no songs stored in the list</strong>.</p>
+<p>If there are songs in the ArrayList but none of them are by the artistName entered by the user (i.e. passed as a parameter), then the following message should be returned:  <strong>&quot;There are no songs for the artist: &quot; + artist</strong></p>
+<p>Remember to cater for case-sensitive searches. </p>
+<h2>Methods (longestSong)</h2>
+<p>This method returns the Song object that has the longest <em>songLength</em> in the ArrayList.  If there are no songs stored in the ArrayList, null should be returned. </p>
+<h2>Methods (averageSongLength)</h2>
+<p>This method returns average <em>songLength</em> in the ArrayList.  </p>
+<p>If there are no songs stored in the ArrayList, zero should be returned. </p>
+<p>Hint: avoid a <em>divide by zero</em> exception in this method by only dividing if there are Songs stored in the ArrayList.</p>
+<h2>Methods (lengthOfAllSongs)</h2>
+<p>This method returns a running total of the <em>songLength</em> for all Songs stored in the ArrayList.  If there are no Songs stored, zero should be returned.</p>
+<h2>Methods (save)</h2>
+<p>This method saves all Song objects from the ArrayList songs to an XML file <em>songs.xml</em>.  You can use the <em>xstream</em> component for this (like we did in class) or any approach you wish.</p>
+<h2>Methods (load)</h2>
+<p>This method loads all saved Song objects back into the program (i.e into the ArrayList songs) from the XML file <em>songs.xml</em>.  You can use the <em>xstream</em> component for this (like we did in class) or any approach you wish.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Driver">
+            <h1>Driver class</h1>
+<p>The UML for the Driver class is here:</p>
+<p><img src="img/06.png" alt=""></p>
+<p>The responsibility of this class is to run the app and perform I/O with the user.  It is the only class that should have:</p>
+<ul>
+<li>System.out.print statements</li>
+<li>Scanner objects defined. </li>
+</ul>
+<h2>Fields</h2>
+<p>There are three private fields in the <em>Driver</em> class:</p>
+<ul>
+<li><strong>input</strong>: This is an object of the <em>Scanner</em> class.  </li>
+<li><strong>artistList</strong>:  This is an object of the <em>ArtistList</em> class. </li>
+<li><strong>songList</strong>: This is an object of the <em>SongList</em> class. </li>
+</ul>
+<p>Instantiate each of these fields at variable declaration time.  Also, there is no validation on any of these fields.</p>
+<h2>main method</h2>
+<p>The main method has one line of code:</p>
+<pre><code>new Driver();</code></pre>
+<h2>Constructor</h2>
+<p>We will write a default constructor for this class.  There is one line of code in this method:</p>
+<pre><code>   runMenu();</code></pre>
+<h2>Menu Displayed</h2>
+<p>Using the same approach adopted when deveoping the Shop projets, the following menu is <em>continually</em> displayed to the user: </p>
+<p><img src="img/13.png" alt=""></p>
+<p>Note that the <em>mainMenu()</em> method displays the above menu and returns the user choice.  The <em>runMenu</em> method is the one that contains the switch statement that processes the user choice.  </p>
+<h2>Option 1 - Add an Artist</h2>
+<p>Create an <em>addArtist()</em> method in Driver.  This method asks the user to enter the artist name, email and phone number.  The entered Artist is then stored in the ArrayList of Artists (i.e. in the ArtistList class). </p>
+<p><img src="img/option1.png" alt=""></p>
+<h2>Option 2 - List all Artists</h2>
+<p>Calls the <em>listOfArtists</em> method in the <em>artistList</em> class.  The String that is returned is printed to the console.</p>
+<p><img src="img/option2.png" alt=""></p>
+<h2>Option 3 - Remove an Artist (by index)</h2>
+<p>Create a <em>deleteArtist()</em> method in Driver.  This method lists all the artists (hint: we used this method in option 2).  If there are:</p>
+<ul>
+<li><p>artists in the list, ask the user to enter the index number of the artist to delete.  Then, provided that the index number is valid, the Artist is deleted from the list. </p>
+</li>
+<li><p>no artists in the list, the following message is displayed:  There is no artist for this index number.</p>
+</li>
+</ul>
+<p><img src="img/option3.png" alt=""></p>
+<h2>Option 4 - Add a song</h2>
+<p>Create an <em>addSong()</em> method in Driver.<br>This method first asks the user to enter the song name, genre, length of the song in minutes and length of the song in seconds.</p>
+<p>Then the list of artists are displayed and the user selects the index number for the artist that wrote the song.  If there are no artists in the system, the user should now be asked to enter the artist details.  </p>
+<p>The song is then stored in the  ArrayList of Songs (i.e. in the SongList class). </p>
+<p>Note: you will need to store the length of the song in seconds, so you will have to convert the minutes and seconds into one <em>seconds</em> value.</p>
+<p><img src="img/option4.png" alt=""></p>
+<h2>Option 5 - List all songs</h2>
+<p>Calls the <em>listOfSongs</em> method in the <em>songList</em> class.  The String that is returned is printed to the console.</p>
+<p><img src="img/option5.png" alt=""></p>
+<h2>Option 6 - List all songs in a genre</h2>
+<p>Create a <em>listSongByGenre()</em> method in Driver.  The method should ask the user to enter the genre (i.e. ROCK, POP, BLUES, RAP, DANCE, CLASSICAL).  It then calls the <em>listSongsBySpecificGenre</em> method in the SongList class and prints the returned String to the console.</p>
+<p><img src="img/option6.png" alt=""></p>
+<h2>Option 7 - List all songs by artist</h2>
+<p>Create a <em>listSongByArtist()</em> method in Driver.  The method should ask the user to enter the name of the artist to search by.  It then calls the <em>listSongsBySpecificArtist</em> method in the SongList class and prints the returned String to the console.</p>
+<p>Note: partial names should return results i.e. <em>Joh</em> should return <em>John Flynn</em> and <em>Johanna</em>. </p>
+<p><img src="img/option7.png" alt=""></p>
+<h2>Option 8 - List song statistics</h2>
+<p>Create a <em>listSongStats()</em> method in Driver.  </p>
+<p>This method should print out the average song length and the length of all songs (these methods are written in the SongList class).  The output should be converted from seconds to be of the format (mm:ss).  </p>
+<p>Finally, the details of the longest song should be displayed. </p>
+<p><img src="img/option8.png" alt=""></p>
+<h2>Option 9 - Remove a song (by index)</h2>
+<p>Create a <em>deleteSong()</em> method in Driver.  This method lists all the songs (hint: we used this method in option 5).  If there are:</p>
+<ul>
+<li><p>songs in the list, ask the user to enter the index number of the song to delete.  Then, provided that the index number is valid, the Song is deleted from the list. </p>
+</li>
+<li><p>no songs in the list, the following message is displayed:  There is no song for this index number.</p>
+</li>
+</ul>
+<p><img src="img/option9.png" alt=""></p>
+<h2>Option 10 - Save to XML</h2>
+<p>This method will save both lists (the artists and the songs) to an XML file. </p>
+<h2>Option 11 - Load from XML</h2>
+<p>This method will load both lists (the artists and the songs) form the XML file that was created in Option 10. </p>
+<h2>Option 0 - Exit</h2>
+<p>This option exits the application.  </p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Truncating">
+            <h1>Formatting decimal output</h1>
+<p>If you want to truncate a double field to two decimal places, you can adopt this approach (i.e. when calculating the average song length).</p>
+<ul>
+<li>Add the following helper method to the SongList class:</li>
+</ul>
+<pre><code>    private double toTwoDecimalPlaces(double num){
+        return (int) (num *100 ) /100.0; 
+    }</code></pre>
+<ul>
+<li>This method:<ul>
+<li>takes in a parameter (called <em>num</em>) e.g. 45.76899765</li>
+<li>multiplies it by 100 e.g. 4576.899765</li>
+<li>casts it as an int e.g. 4576</li>
+<li>divides it by 100 e..g 45.76</li>
+<li>and returns this value truncated to two decimal places.</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Given the following sample code:</li>
+</ul>
+<pre><code class="lang-java">
+    public double calculateSomething(){
+        return ( value / anotherValue );
+    }</code></pre>
+<ul>
+<li>We can use the <strong>toTwoDecimalPlaces</strong> method to truncate the result to two decimal places:</li>
+</ul>
+<pre><code class="lang-java">
+    //When returning the result of a calculation, we want to call our 
+    //new toTwoDecimalPlaces method to truncate the result to two decimal places:
+    public double calculateSomething(){
+        return toTwoDecimalPlaces(  value / anotherValue );
+    }</code></pre>
+<p>You can apply this approach to the <em>averageSongLength</em> method in the SongList class...the returned result can be truncated to two decimal places.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="JUnit">
+            <h1>JUnit</h1>
+<p><strong>NOTE: YOU DO NOT HAVE TO DO THIS STEP IF YOU DON&#39;T WANT TO.  THERE ARE NO ADDITIONAL MARKS IN THE MARKING SCHEME FOR DOING THIS.  HOWEVER, IT WILL HELP YOU IDENTIFY AND FIX BUGS IN YOUR CODE, THEREBY INCREASING YOUR GRADE.</strong></p>
+<p>For correcting your assignments, we have written four automated test classes:</p>
+<ul>
+<li><em>SongTest</em>: This class exhaustively tests the methods in the Song class. </li>
+<li><em>ArtistTest</em>: This class exhaustively tests the methods in the Artist class. </li>
+<li><em>SongListTest</em>: This class tests all methods, except load and store in the SongList class. </li>
+<li><em>ArtistListTest</em>: This class tests all methods, except load and store in the ArtistList class</li>
+</ul>
+<p>We will be running these classes over your submitted assignment and correcting based on the results of the tests.  We are releasing them to you so that, prior to submitting your work, you can pre-correct your assignment and make changes / fix your code based on the output of the tests.</p>
+<p>The following steps will show you how to incorporate these into your assignment.</p>
+<h2>Creating a Test Folder</h2>
+<p>In your IntelliJ project, right click on your project name.  When the context menu appears, select <em>New --&gt; Directory</em>.  Call the new directory <em>test</em>.  </p>
+<p>Note that the <em>src</em> folder is blue in colour and the <em>test</em> one is grey:</p>
+<p><img src="img/14.png" alt=""></p>
+<p>We need to &#39;mark&#39; this directory as a test source folder.  To do this, right click on the new <em>test</em> folder and when the context menu appears, select <em>Mark Directory as --&gt; Test Sources Root</em>: </p>
+<p><img src="img/15.png" alt=""></p>
+<p>Your <em>test</em> directory should now be green in colour.</p>
+<h2>Creating a test class</h2>
+<p>Right click on the <em>test</em> folder and choose <em>New --&gt; Java Class</em>.  Give the class the name, <em>SongTest</em>.  </p>
+<p>Delete any generated code in your new class and paste <a href="archives/SongTest.java">this code</a> into it instead.</p>
+<p>You will notice that a lot of errors exist in relation to the <em>JUnit</em> imports <em>annotations</em> and the <em>assert</em> methods:</p>
+<p><img src="img/16.png" alt=""></p>
+<p>We need to add JUnit to our classpath so that these imports and methods can be recognised.  To do this, click on one of the JUnit imports that is causing an error.  Click on the red lightbulb that appears and then select <em>Add Junit4 to Classpath</em>:</p>
+<p><img src="img/17.png" alt=""></p>
+<p>Your test class should have no syntax errors now (assuming you have writen all the methods in the class and followed all of our naming laid out in the assignment).  </p>
+<h2>Running your test class</h2>
+<p>To run the test class, right click on the test folder and select <em>Run --&gt; All Tests</em>.  </p>
+<p>A new window will appear, reporting the results of the tests.  In our case here, all our tests passed:</p>
+<p><img src="img/18.png" alt=""></p>
+<p>If you have failing tests, the output could look something like this:</p>
+<p><img src="img/19.png" alt=""></p>
+<h2>Fixing Errors</h2>
+<p>If your test class is not compiling i.e. has syntax errors, resist the urge to change the code in the test class.  Instead return to your classes and update your code.  Typical things that could be wrong in your code include:</p>
+<ul>
+<li>class name different (check case sensitivity)</li>
+<li>method names different (check case sensitivity)</li>
+<li>missing methods in your code</li>
+<li>wrong return types in your methods</li>
+<li>etc....</li>
+</ul>
+<p>If your test class is compiling but is failing on tests, maybe there is an issue with:</p>
+<ul>
+<li><p>validation e.g.:</p>
+<ul>
+<li>validation not included as speced</li>
+<li>validation only done at constructor level</li>
+<li>only the <em>if</em> part is included (no else)</li>
+<li>maybe you are checking different values to the test class e.g. &gt; 0 instead of &gt;= 0</li>
+<li>etc.</li>
+</ul>
+</li>
+<li><p>requirements missed e.g.</p>
+<ul>
+<li>maybe you forgot to include all the requirements for a specific method e.g. in the list methods, you typically should have three return statements...maybe you don&#39;t have them all included.</li>
+</ul>
+</li>
+<li><p>general bugs e.g.</p>
+<ul>
+<li>maybe you are updating the wrong field by accident</li>
+<li>maybe you are forgetting to update something</li>
+<li>so many different things can go wrong here!</li>
+</ul>
+</li>
+</ul>
+<p>As you make changes to your code, keep running the tests to see your progress.  </p>
+<h2>Remaining test classes</h2>
+<p>Follow the same procedure as above to include the following three test classes:</p>
+<ul>
+<li><a href="archives/ArtistTest.java">ArtistTest.java</a>.</li>
+<li><a href="archives/SongListTest.java">SongListTest.java</a>.</li>
+<li><a href="archives/ArtistListTest.java">ArtistListTest.java</a>.</li>
+</ul>
+<p>Note: there is no automated test class for Driver.java as this one uses the console for input (i.e. keeps <em>interrupting</em> the program running).</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Submitting">
+            <h1>Submitting your assignment</h1>
+<p>When you are ready to submit your assignment:</p>
+<ul>
+<li><p>Rename your project folder using the naming convention <strong>firstname_surname</strong> e.g. siobhan_drohan.</p>
+</li>
+<li><p>Zip this folder ensuring that it is called  <strong>firstname_surname.zip</strong>.  No WINRARs please!</p>
+</li>
+<li><p>The deadline for this assignment is <strong>10 pm Friday 8th March, 2019</strong>.</p>
+</li>
+</ul>
+<h2>Interviews</h2>
+<p>As you know, it is <strong>compulsory</strong> that you are interviewed on your submission in order to demonstrate both <em>Understanding</em> and <em>Authorship</em>.  </p>
+<p>These interviews will typically take place in labs the week after submission.  </p>
+<p>The grade for the interview is a multiplier for your assigment grade.  Should you fail to show for your interview, you will receive zero, resulting in an overall grade of zero for your submission.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="IndicativeMarkingScheme">
+            <h1>Indicative Marking Scheme</h1>
+<p>The marking scheme for the assignment is broken into the following:</p>
+<ul>
+<li><p>Artist Class - 8%</p>
+</li>
+<li><p>Song Class - 7%</p>
+</li>
+<li><p>ArtistList Class - 15%</p>
+</li>
+<li><p>SongList Class - 35%</p>
+</li>
+<li><p>Driver - 25%</p>
+</li>
+<li><p>Javadoc - 5%</p>
+</li>
+<li><p>Coding standards, naming, style, etc - 5%</p>
+</li>
+</ul>
+<p>The above totals to 100%.</p>
+<h2>Extra Credit</h2>
+<p>Extras - 10% will be available to include extras like including exceptions throughout, robust error handling, etc. This 10% is only available if all other functionalities are attempted and will bring your mark to a maximum of 100%.  Good examples of extra credit functionality could be:</p>
+<ul>
+<li><p>to do a cascade delete on the Artist i.e. delete all the songs associated with the artist.  If attempting this, you might need to do a bit of research on the .equals() method.  </p>
+</li>
+<li><p>when adding an Artist to a Song, you might have noticed that you had to select an Artist from a list of pre-existing artists.  There was no option to allow the user to add a new Artist.  Instead, what you could do is allow the user to enter, say, -1 to add a new Artist.  </p>
+</li>
+</ul>
+<p>Note: If you are making changes to the functionality, it may be the case that the tests will fail for that particular area.  In this case, you are permitted to update the tests to reflect this new functionality, but please include a README with your project to indicate that you have done this. </p>
+<h2>Interviews</h2>
+<p>The grade for the interview is a multiplier for your assigment grade.  Should you fail to show for your interview, you will receive zero, resulting in an overall grade of zero for your submission.</p>
+<h2>Use of JUnit when developing your code</h2>
+<p>If your code passes the JUnit tests provided, this means that you will automatically have 65% (interview permitting!).</p>
+<p>Use of the JUnit tests will significantly help you to improve your code. It is worth the effort of getting it up and running and will also be a help to you when we cover it more fully later in the semester. Go for it!</p>
+
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+  <br>
+  <script>
+    $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+    $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+  </script>
+
+
+
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right small menu">
+      <div class="ui tiny basic message segment">
+         Powered by <a href="https://github.com/edeleastar/tutors-ts">tutors-ts.</a> 
+      </div>
+    </div>
+  </div>
+
+  </body>
+
+</html>

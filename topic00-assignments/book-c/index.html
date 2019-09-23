@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css"
+          type="text/css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"
+          rel="stylesheet"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      
+
+body {
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+  font-size:90%;
+  color: black;
+}
+
+p {
+  margin: 0.5em;
+}
+
+pre code {
+  font-family: "Monaco";
+  font-size: 100%;
+}
+
+img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin:10px;
+}
+
+h1, h2, h3 {
+  border-bottom:thin solid black;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+h1 {
+  font-style:italic;
+  font-size:130%;
+}
+
+h2 {
+  font-size:110%;
+}
+
+h3 {
+  font-size:100%;
+}
+
+
+
+      
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.footer {
+  background: white;
+  text-align: right;
+}
+.content {
+  flex: 1;
+  overflow: auto;
+}
+
+
+
+    </style>
+  </head>
+
+  
+  
+
+  <div class="ui fixed top pointing inverted stackable menu labmenu">
+    <header class="header item">
+      <i id="toc" class="sitemap icon"></i>
+      
+        <a href="../index.html">  Assignments   </a>
+      
+    </header>
+    <div class="right tab-menu menu">
+      
+        <a class="item" data-tab="RepeatAssignment">
+          RepeatAssignment
+        </a>
+      
+        <a class="item" data-tab="Overview">
+          Overview
+        </a>
+      
+        <a class="item" data-tab="Hierarchy">
+          Hierarchy
+        </a>
+      
+        <a class="item" data-tab="Qualification">
+          Qualification
+        </a>
+      
+        <a class="item" data-tab="DoctorAPI">
+          DoctorAPI
+        </a>
+      
+        <a class="item" data-tab="Driver">
+          Driver
+        </a>
+      
+        <a class="item" data-tab="JUnit">
+          JUnit
+        </a>
+      
+        <a class="item" data-tab="Submitting">
+          Submitting
+        </a>
+      
+        <a class="item" data-tab="IndicativeMarkingScheme">
+          IndicativeMarkingScheme
+        </a>
+      
+    </div>
+  </div>
+
+
+  
+
+  <div class="ui pushable">
+    <div class="ui inverted labeled icon left inline vertical sidebar menu">
+      <br><br>
+      
+        
+          
+            <a class="item"
+               href="/topic00-assignments/book-a/index.html">Assignment1 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic00-assignments/book-b/index.html">Assignment2 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic00-assignments/book-c/index.html">RepeatAssignment </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic01-IntelliJ-JVM-and-IO/unit-01b-labs/book-a-install/index.html">Lab-01a </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic01-IntelliJ-JVM-and-IO/unit-01b-labs/book-b-example/index.html">Lab-01b </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic02-primitive-arrays/unit-02b-labs/book-1-array-exercises/index.html">Lab-02a </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic02-primitive-arrays/unit-02b-labs/book-2-shop-v2.x/index.html">Lab-02b </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic03-arraylists/unit-03b-labs/book-1-arraylists/index.html">Lab-03 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic04-menu-and-crud/unit-04b-labs/book-1-loop-exercises/index.html">Lab-04a </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic04-menu-and-crud/unit-04b-labs/book-2-crud/index.html">Lab-04b </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic05-persistence-xml-exceptions/unit-05b-labs/book-xml-exceptions/index.html">Lab-05 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic06-collections-map-set/unit-06b-labs/book/index.html">Lab-06 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic07-inher-polym/unit-07b-labs/book/index.html">Lab-07 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic08-abstraction/unit-08b-labs/book-1-abstraction/index.html">Lab-08 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic09-interfaces/unit-09b-labs/book-interfaces/index.html">Lab-09 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic10-TDD-and-JUnit/unit-10b-labs/book-tdd/index.html">Lab-10 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic11-additional-material/unit-11b-labs/book-1-shopv6/index.html">ShopV6.0 </a>
+          
+        
+      
+    </div>
+    <div class="pusher" tabindex="-1">
+      <div class="ui basic segment">
+        <br>
+        
+          <div class="ui tab segment lab" data-tab="RepeatAssignment">
+            <h1>Readme</h1>
+<p>Repeat Assignment is based on materials covered in Programming Fundamentals 2 module.  It is worth 100% of your overall repeat grade for the module.  </p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Overview">
+            <h1>The Repeat Assignment</h1>
+<p>The repeat assignment is an enhanced version of Assignment 2 that you worked on earlier this semester.  In particular, you are being asked to complete Assignment 2 and also add validation on the fields in some model classes.</p>
+<p>You are permitted to use the code that you have already written for Assignment 2 and build on it.  You don&#39;t need to revisit the assignment 2 specification again as all details are included here in this specification.</p>
+<h2>Background of the System</h2>
+<p>The Medical Council of Ireland maintains a database of doctors practicing in the country.  Your task is to develop a scaled-down version of their database of doctors.  The menu-driven, console app will be able to handle three types of doctor registration:</p>
+<ul>
+<li>Intern</li>
+<li>General  </li>
+<li>Specialist </li>
+</ul>
+<p>For each type of doctor, you can add multiple qualifications and for specialists, you can add multiple areas of speciality.</p>
+<p>The information entered via the app will be persisted in an XML file.</p>
+<p>A suggested menu is:</p>
+<p><img src="img/menu.png" alt=""></p>
+<p>A suggested file structure is:</p>
+<p><img src="img/files.png" alt=""></p>
+<h2>Similar(ish) Projects</h2>
+<p>In your previous labs, you worked on a Shop project and saw an inheritance hierarchy in the Social Network project.  </p>
+<p>Your assignment will incorporate some concepts from these projects but will require you to develop your own algorithms to solve some of the requirements given to you.</p>
+<p>The solution to the Shop V5.0 project can be found <a href="archives/ShopV5.0.zip">here</a>.</p>
+<p>The solution to the Social Network V4.0 project can be found <a href="archives/network-solution-v4.zip">here</a>.</p>
+<h2>utils</h2>
+<p>We recommend using <em>ScannerUtility</em> (see the Shop project above) for all int and double input.  This will ensure a robust application for numeric data entry.  Consider also writing two additional methods in this utility class to read a line and also read a char.  That way, all of your scanner reads are in one location.</p>
+<h2>Some key points to remember when coding your assignment</h2>
+<ul>
+<li><p>You <strong>must</strong> use the names given for the Classes and Methods; failure to do so will result in reduced marks.</p>
+</li>
+<li><p>For all variables, methods and classes used, please adhere to the naming standards discussed in class.</p>
+</li>
+<li><p>Use internal, helper methods (i.e. private access methods) where appropriate.  The interface for your class <strong>must</strong> match the interface given in the assignment brief.  Deviating from the interface will result in reduced marks.  Note: the interface here refers to the fields, constructors and methods that are visible outside the class. </p>
+</li>
+<li><p>Your classes and methods should be Javadoc commented.</p>
+</li>
+<li><p>Don&#39;t forget that you can get IntelliJ to generate methods such as getters, setters, constructors and toString.  It is a good idea to generate these methods and then add the additional requirements (such as validation) manually.  This will free up some time for concentrating on other areas of the assignment. </p>
+</li>
+<li><p>There should be absolutely <em>NO</em> <strong>System.out.println</strong> or <strong>Scanner</strong> reads in any class except for Driver (and utility classes, if you are using them).  If you have any such interaction with the user in any class other than Driver, you will loose marks.  Instead, you should be returning information back to Driver to print it.  Or passing information read in Driver to other classes via method parameters.</p>
+</li>
+</ul>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Hierarchy">
+            <h1>Doctor hierarchy</h1>
+<p><img src="img/01.png" alt=""></p>
+<p>The classes in the <strong>Doctor</strong> hierarchy are each described below.  Note:</p>
+<ul>
+<li><p>Use IntelliJ to generate, where applicable, <em>constructors</em>, <em>accessors</em> and <em>mutators</em> methods. </p>
+</li>
+<li><p>The toString method should return the current object state as well as the object state in any of its super classes.  </p>
+</li>
+</ul>
+<h2>Doctor</h2>
+<p>An abstract class that manages common information for a doctor, along with their qualifications.  This is the super class of the Doctor hierarchy and also implements the <em>iDoctor</em> interface (see below for details on this interface).</p>
+<p><img src="img/02.png" alt=""></p>
+<p>The validation that you should include in this class is as follows:</p>
+<ul>
+<li><strong>name</strong> - should be between 10 and 30 characters inclusive</li>
+<li><strong>address</strong> - should be between 10 and 100 characters inclusive</li>
+<li><strong>contactNumber</strong> - should contain only numbers</li>
+</ul>
+<p>The getFullGender method is a helper method that returns <em>Female</em> if an <em>F</em> is stored, <em>Male</em> if an <em>M</em> is stored and <em>Unknown</em> otherwise.  This method is invoked in the Doctor&#39;s toString method.</p>
+<h2>iDoctor</h2>
+<p>An <em>Interface</em> that is implemented by the <em>Doctor</em> class and has the following method signatures:</p>
+<pre><code class="lang-java">    double calcRegistrationFee();
+    String viewContactDetails();</code></pre>
+<p>The viewContactDetails() method is implemented directly in the Doctor class.  This method returns a snapshot of details relating to the doctor (i.e. just the name, address and contact number).</p>
+<p>The calcRegistrationFee() method is implemented in all of the <em>concrete</em> classes below.  </p>
+<h2>RegisteredDoctor</h2>
+<p>An abstract class that manages whether the doctor was qualified in Ireland or not.  This extends the Doctor class.</p>
+<p><img src="img/03.png" alt=""></p>
+<h2>General</h2>
+<p>A concrete class that stores no additional data but calculates the annual fee owed to the medical council for a regular doctor.  The fee is 194 if they were qualified in Ireland and 410 otherwise. This class extends RegisteredDoctor.</p>
+<p><img src="img/04.png" alt=""></p>
+<h2>Specialist</h2>
+<p>A concrete class that stores a HashSet of specialisms and calculates the annual fee owed to the medical council.  For a specialist, the fee is 425 if they were qualified in Ireland and 641 otherwise. This class extends RegisteredDoctor.  The viewContactDetails should be overridden here and, in conjuction with the name, address and contactNumber, the specialisms should be returned.  </p>
+<p><img src="img/06.png" alt=""></p>
+<h2>Intern</h2>
+<p>A concrete class that stores no additional data but determines the annual fee (flat fee of 310) owed to the medical council for an intern.  Note in the diagram above, that the intern doesn&#39;t extend <em>RegisteredDoctor</em> as they are still officially in training. </p>
+<p><img src="img/05.png" alt=""></p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Qualification">
+            <h1>Qualification class</h1>
+<p><img src="img/07.png" alt=""></p>
+<p>This is a concrete class that manages details relating to a single medical qualification.  Use IntelliJ to generate the getters and setters for each field.</p>
+<p>The validation that you should include in this class is as follows:</p>
+<ul>
+<li><p><strong>degreeType</strong> - should be only one of these values: <em>BSc, MSc, PhD</em> (note the case; make sure you fix user input if their case is wrong). If none of these are entered, give a default value of <em>XXX</em>.</p>
+</li>
+<li><p><strong>degreeName</strong> - should be between 5 and 100 characters inclusive</p>
+</li>
+<li><p><strong>college</strong> - should be between 5 and 80 characters inclusive</p>
+</li>
+<li><p><strong>conferringYear</strong> - should contain only numbers and should be greater than 1940.  Should be exactly four characters long too.  If invalid data is entered here, give a default value of 1900.</p>
+</li>
+</ul>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="DoctorAPI">
+            <h1>DoctorAPI</h1>
+<p>This controller class is responsible for storing and managing ALL the doctors entered by the user via the console.  Note that there are no System.out.println statements in this class, nor are there any Scanner reads; all the I/O is in the other controller class, the <em>Driver</em> (and the utility classes, if you are using them).</p>
+<p><img src="img/08.png" alt=""></p>
+<p>Also note that the methods listed below are only some of the methods that you will probably require to complete the assignment.  The methods that you will add to this class will depend on the menu items that you include in the Driver class.  </p>
+<h2>Fields</h2>
+<p>There is one private field, <em>doctors</em>, which is an ArrayList of Doctor.  It should be instantiated at declaration time.  </p>
+<h2>Constructor</h2>
+<p>We will use the default constructor for this class (no need to code it).  For this reason, there is no constructor shown in the diagram above.</p>
+<h2>Methods (getters and setters)</h2>
+<p>There are no getter or setter methods for the instance field <em>doctors</em>.  Instead, we will use the following methods to manage the ArrayList.</p>
+<h2>Methods (addDoctor)</h2>
+<p>This method will add a Doctor object (passed as a parameter) to the ArrayList <em>doctors</em>.  There is no validation in this method.</p>
+<h2>Methods (getDoctor)</h2>
+<p>This method will return a Doctor object at the location <em>index</em>, which is passed as a paramter.  There is some validation in this method:</p>
+<ul>
+<li><p>Check that the passed index exists in the ArrayList:</p>
+<ul>
+<li>if it does exist, retrieve the associated Doctor object and return it.</li>
+<li>if the passed index is not valid, return <em>null</em>. </li>
+</ul>
+</li>
+</ul>
+<h2>Methods (removeDoctor)</h2>
+<p>This method removes a Doctor object at the location <em>index</em>, which is passed as a paramter.  There is some validation in this method:</p>
+<ul>
+<li><p>Check that the passed index exists in the ArrayList:</p>
+<ul>
+<li>if it does exist, remove it from the ArrayList and return <em>true</em>.</li>
+<li>if the passed index is not valid, return <em>false</em>. </li>
+</ul>
+</li>
+</ul>
+<h2>Methods (numberOfDoctors)</h2>
+<p>This method returns the number of Doctor objects stored in the ArrayList <em>doctors</em>.</p>
+<h2>Methods (listOfDoctors, no parameter)</h2>
+<p>This method is similar-ish to a toString.  It builds (and returns) a String of all Doctor objects in the ArrayList.  Each object is on a new line.  The beginning of the line has the index number of the object in the ArrayList e.g.</p>
+<p><img src="img/10.png" alt=""></p>
+<p>If there are no songs in the ArrayList, the following message should be returned:  <strong>No doctors stored</strong>.</p>
+<h2>Methods (listOfDoctors, String parameter)</h2>
+<p>This method is used when reporting on doctors by category.  It builds and returns a list of doctors (and their associated index number in the ArrayList) by either <em>Intern</em>, <em>Specialist</em> or <em>General</em>.  Each doctor object should be on a new line.  Sample output would be:</p>
+<p><img src="img/11.png" alt=""></p>
+<p>If there are no doctors of the chosen type, return a message stating <strong>No <em>doctor-type</em> doctors stored</strong>. </p>
+<h2>Methods (searchDoctorsByName)</h2>
+<p>This method builds (and returns) an ArrayList of doctors containing all the Doctor objects whose name matches the String entered by the user.  </p>
+<p>Note: cater for case sensitivity in your searches i.e. <em>Siobhan, SIOBHAN and siobhan</em> should be considered the same for search purposes. </p>
+<h2>Methods (calculateAnnualFees)</h2>
+<p>This method adds all the fees for each doctor stored in the doctors ArrayList.</p>
+<h2>Methods (save)</h2>
+<p>This method saves all Doctor objects from the ArrayList songs to an XML file <em>doctors.xml</em>.  You can use the <em>xstream</em> component for this (like we did in class) or any approach you wish.</p>
+<h2>Methods (load)</h2>
+<p>This method loads all saved Doctor objects back into the program (i.e into the ArrayList doctors) from the XML file <em>doctors.xml</em>.  You can use the <em>xstream</em> component for this (like we did in class) or any approach you wish.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Driver">
+            <h1>Driver class</h1>
+<p>The responsibility of the Driver class is to run the app and perform I/O with the user.   </p>
+<p>In this class, create an object of the <em>DoctorAPI</em> class.  Hint:  use the ShopV5.0 driver as a guide for completing this class.  </p>
+<h2>Menu</h2>
+<p>A suggested menu is:</p>
+<p><img src="img/menu.png" alt=""></p>
+<p>When writing this class, the above menu is just a suggestion.  You may deviate from this menu as you wish.  If you provide more elaborate menu items/reports, you will need to add more methods to the DoctorAPI class; remember, avoid the temptation to make the ArrayList in DoctorAPI public as this would break encapsulation rules.      </p>
+<p>If you do deviate from the suggested menu, ensure that you still have the following basic elements on the menu:</p>
+<ul>
+<li>CRUD on the Doctor list</li>
+<li>CRUD on the specialisms HashSet</li>
+<li>reporting and</li>
+<li>persistence</li>
+</ul>
+<p>For more direction, please refer to the rubric in the indicative marking scheme tab to see how we are grading the Driver class, the DoctorAPI class and the JUnit testing of the DoctorAPI class.  In particular, please note that 100% in this assignment will require you to provide methods in DoctorAPI with associated menu items in Driver beyond what we have outlined in this spec.  These additional methods will also need to be JUnit tested.    </p>
+<h2>A note on I/O</h2>
+<p>Aside from the ScannerInput class (if you are using it),  this class should be the only class that has:</p>
+<ul>
+<li>System.out.print statements</li>
+<li>Scanner objects defined. </li>
+</ul>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="JUnit">
+            <h1>JUnit</h1>
+<p>In the first assignment, we supplied a number of JUnit Test Classes:</p>
+<ul>
+<li><a href="archives/SongTest.java">SongTest.java</a> </li>
+<li><a href="archives/SongListTest.java">SongListTest.java</a>.</li>
+<li><a href="archives/ArtistTest.java">ArtistTest.java</a>.</li>
+<li><a href="archives/ArtistListTest.java">ArtistListTest.java</a>.</li>
+</ul>
+<p>We also provided the steps (included below) that showed you how to incorporate these test classes into your assignment.  </p>
+<h2>JUnit Task in this Assignment</h2>
+<p>For this assignment, use the <em>ArtistListTest</em> and <em>SongListTest</em> classes as a template and write a test class for <em>DoctorAPI</em>.</p>
+<h2>Assignment 1: Creating a Test Folder</h2>
+<p>In your IntelliJ project, right click on your project name.  When the context menu appears, select <em>New --&gt; Directory</em>.  Call the new directory <em>test</em>.  </p>
+<p>Note that the <em>src</em> folder is blue in colour and the <em>test</em> one is grey:</p>
+<p><img src="img/14.png" alt=""></p>
+<p>We need to &#39;mark&#39; this directory as a test source folder.  To do this, right click on the new <em>test</em> folder and when the context menu appears, select <em>Mark Directory as --&gt; Test Sources Root</em>: </p>
+<p><img src="img/15.png" alt=""></p>
+<p>Your <em>test</em> directory should now be green in colour.</p>
+<h2>Assignment 1: Creating a test class</h2>
+<p>Right click on the <em>test</em> folder and choose <em>New --&gt; Java Class</em>.  Give the class the name, <em>SongTest</em>.  </p>
+<p>Delete any generated code in your new class and paste <a href="archives/SongTest.java">this code</a> into it instead.</p>
+<p>You will notice that a lot of errors exist in relation to the <em>JUnit</em> imports <em>annotations</em> and the <em>assert</em> methods:</p>
+<p><img src="img/16.png" alt=""></p>
+<p>We need to add JUnit to our classpath so that these imports and methods can be recognised.  To do this, click on one of the JUnit imports that is causing an error.  Click on the red lightbulb that appears and then select <em>Add Junit4 to Classpath</em>:</p>
+<p><img src="img/17.png" alt=""></p>
+<p>Your test class should have no syntax errors now (assuming you have writen all the methods in the class and followed all of our naming laid out in the assignment).  </p>
+<h2>Assignment 1: Running your test class</h2>
+<p>To run the test class, right click on the test folder and select <em>Run --&gt; All Tests</em>.  </p>
+<p>A new window will appear, reporting the results of the tests.  In our case here, all our tests passed:</p>
+<p><img src="img/18.png" alt=""></p>
+<p>If you have failing tests, the output could look something like this:</p>
+<p><img src="img/19.png" alt=""></p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Submitting">
+            <h1>Submitting your assignment</h1>
+<p>When you are ready to submit your assignment:</p>
+<ul>
+<li><p>Rename your project folder using the naming convention <strong>firstname_surname</strong> e.g. siobhan_drohan.</p>
+</li>
+<li><p>Zip this folder ensuring that it is called  <strong>firstname_surname.zip</strong>.  No WINRARs please!</p>
+</li>
+<li><p>The deadline for this assignment is the end of the summer holidays <strong>10 pm Wednesday 28th August, 2019</strong>.</p>
+</li>
+</ul>
+<h2>Interview Schedule</h2>
+<p>It is <strong>compulsory</strong> that you are interviewed on your submission in order to demonstrate both <em>Understanding</em> and <em>Authorship</em>.  </p>
+<p>Interviews will take place during the first week of September, on <strong>Tuesday 3rd September</strong>.  Following the submission date, we will email out (via Moodle) an interview schedule.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="IndicativeMarkingScheme">
+            <h1>Indicative Marking Scheme</h1>
+<p>The marking rubric for the assignment is:</p>
+<p><img src="img/20.png" alt=""></p>
+<p>We have a marking spreadsheet that corresponds directly to this rubric, so make sure that you are constantly reviewing your progress by re-visiting this rubric.</p>
+<h2>Extra Credit</h2>
+<p>Extras - 10% will be available to include extras like robust error handling, a good UX, etc. This 10% is only available if all other functionalities are attempted and will bring your mark to a maximum of 100%. </p>
+<h2>Interviews</h2>
+<p>The grade for the interview is a multiplier for your assigment grade.  Should you fail to show for your interview, you will receive zero, resulting in an overall grade of zero for your submission.</p>
+
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+  <br>
+  <script>
+    $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+    $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+  </script>
+
+
+
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right small menu">
+      <div class="ui tiny basic message segment">
+         Powered by <a href="https://github.com/edeleastar/tutors-ts">tutors-ts.</a> 
+      </div>
+    </div>
+  </div>
+
+  </body>
+
+</html>
