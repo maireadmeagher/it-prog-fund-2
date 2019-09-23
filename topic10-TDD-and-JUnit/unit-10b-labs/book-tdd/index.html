@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css"
+          type="text/css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"
+          rel="stylesheet"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      
+
+body {
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+  font-size:90%;
+  color: black;
+}
+
+p {
+  margin: 0.5em;
+}
+
+pre code {
+  font-family: "Monaco";
+  font-size: 100%;
+}
+
+img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin:10px;
+}
+
+h1, h2, h3 {
+  border-bottom:thin solid black;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+h1 {
+  font-style:italic;
+  font-size:130%;
+}
+
+h2 {
+  font-size:110%;
+}
+
+h3 {
+  font-size:100%;
+}
+
+
+
+      
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.footer {
+  background: white;
+  text-align: right;
+}
+.content {
+  flex: 1;
+  overflow: auto;
+}
+
+
+
+    </style>
+  </head>
+
+  
+  
+
+  <div class="ui fixed top pointing inverted stackable menu labmenu">
+    <header class="header item">
+      <i id="toc" class="sitemap icon"></i>
+      
+        <a href="../../index.html"> Labs  </a>
+      
+    </header>
+    <div class="right tab-menu menu">
+      
+        <a class="item" data-tab="Lab-10">
+          Lab-10
+        </a>
+      
+        <a class="item" data-tab="DVD">
+          DVD
+        </a>
+      
+        <a class="item" data-tab="Library">
+          Library
+        </a>
+      
+        <a class="item" data-tab="TestLargest">
+          TestLargest
+        </a>
+      
+        <a class="item" data-tab="Solution">
+          Solution
+        </a>
+      
+    </div>
+  </div>
+
+
+  
+
+  <div class="ui pushable">
+    <div class="ui inverted labeled icon left inline vertical sidebar menu">
+      <br><br>
+      
+        
+          
+            <a class="item"
+               href="/topic00-assignments/book-a/index.html">Assignment1 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic00-assignments/book-b/index.html">Assignment2 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic00-assignments/book-c/index.html">RepeatAssignment </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic01-IntelliJ-JVM-and-IO/unit-01b-labs/book-a-install/index.html">Lab-01a </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic01-IntelliJ-JVM-and-IO/unit-01b-labs/book-b-example/index.html">Lab-01b </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic02-primitive-arrays/unit-02b-labs/book-1-array-exercises/index.html">Lab-02a </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic02-primitive-arrays/unit-02b-labs/book-2-shop-v2.x/index.html">Lab-02b </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic03-arraylists/unit-03b-labs/book-1-arraylists/index.html">Lab-03 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic04-menu-and-crud/unit-04b-labs/book-1-loop-exercises/index.html">Lab-04a </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic04-menu-and-crud/unit-04b-labs/book-2-crud/index.html">Lab-04b </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic05-persistence-xml-exceptions/unit-05b-labs/book-xml-exceptions/index.html">Lab-05 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic06-collections-map-set/unit-06b-labs/book/index.html">Lab-06 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic07-inher-polym/unit-07b-labs/book/index.html">Lab-07 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic08-abstraction/unit-08b-labs/book-1-abstraction/index.html">Lab-08 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic09-interfaces/unit-09b-labs/book-interfaces/index.html">Lab-09 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic10-TDD-and-JUnit/unit-10b-labs/book-tdd/index.html">Lab-10 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic11-additional-material/unit-11b-labs/book-1-shopv6/index.html">ShopV6.0 </a>
+          
+        
+      
+    </div>
+    <div class="pusher" tabindex="-1">
+      <div class="ui basic segment">
+        <br>
+        
+          <div class="ui tab segment lab" data-tab="Lab-10">
+            <h1>Objectives</h1>
+<p>JUnit · Test Classes · Annotations · Automating Tests</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="DVD">
+            <h1>Testing the DVD class</h1>
+<p>In this step, you will create a JUnit test class for DVD.java. </p>
+<h2>Creating the New Project</h2>
+<p>Create a new project called DVDLibraryV4.0 in IntelliJ.</p>
+<p>Copy the following classes into the project:</p>
+<ul>
+<li><p><a href="archives/Driver.java">Driver.java</a></p>
+</li>
+<li><p><a href="archives/Library.java">Library.java</a></p>
+</li>
+<li><p><a href="archives/DVD.java">DVD.java</a></p>
+</li>
+</ul>
+<p>Create a new <em>lib</em> directory and copy this component into it:</p>
+<ul>
+<li><a href="archives/xstream-1.4.10.jar">xstream-1.4.10.jar</a></li>
+</ul>
+<p>Right click on the new <em>lib</em> folder and select the following option from the context menu <em>Add as library...</em>.  Click OK.</p>
+<h2>Creating DVDTest.java</h2>
+<p><em>Note: you may need to refer to this weeks lecture slides for support here.</em></p>
+<p>In IntelliJ, Create a new directory called <strong>test</strong> and right click on it.  Select the option <em>Mark Directory as</em> and select <strong>Test Sources Root</strong>.</p>
+<p>Your current project structure should look like this:</p>
+<p><img src="./img/01.png" alt=""> </p>
+<p>Open DVD.java. Click above the class declaration, then click on the light bulb…select Create Test:</p>
+<p><img src="./img/02.png" alt=""> </p>
+<p>Choose JUnit5 and Click the <em>Fix</em> button:</p>
+<p><img src="./img/03.png" alt=""> </p>
+<p>...and click the OK button do download JUnit5 from Maven:</p>
+<p><img src="./img/04.png" alt=""> </p>
+<p>Now that JUnit5 is downloaded…select the checkboxes as shown to generate test methods.  Note the class name is set to DVDTest:</p>
+<p><img src="./img/05.png" alt=""> </p>
+<p>DVDTest.java is generated with starting code.  However, there is an error on the toString() method…to get rid of this, just rename it e.g. <em>testToString()</em>: </p>
+<p><img src="./img/06.png" alt=""> </p>
+<h2>Updating DVDTest.java</h2>
+<p>Add four DVD objects and instantiate the first three with titles 19, 20 and 21 characters long (boundary test). Use the default constructor to instantiate the fourth.  </p>
+<pre><code class="lang-java">     private DVD dvd1, dvd2, dvd3, dvd4;
+
+    @BeforeEach
+    void setUp() {
+        dvd1 = new DVD(&quot;The Hobbit(Director)&quot;);  //title with 20 characters
+        dvd2 = new DVD(&quot;The Steve Jobs Film&quot;);   //title with 19 characters
+        dvd3 = new DVD(&quot;Avatar: Directors Cut&quot;); //title with 21 characters
+        dvd4 = new DVD();
+    }
+
+    @AfterEach
+    void tearDown() {
+        dvd1 = dvd2 = dvd3 = dvd4 = null;
+    }</code></pre>
+<p>Use IntelliJ&#39;s <em>ALT+Enter</em> facility to import the correct Annotation libraries for @BeforeEach and @AfterEach. </p>
+<p>Refactor the <em>getTitle</em> like so:</p>
+<pre><code class="lang-java">    @Test
+    void getTitle() {
+        assertEquals(&quot;The Hobbit(Director)&quot;, dvd1.getTitle());
+        assertEquals(&quot;The Steve Jobs Film&quot;, dvd2.getTitle());
+        assertEquals(&quot;Avatar: Directors Cu&quot;, dvd3.getTitle());
+        assertEquals(null, dvd4.getTitle());
+    }</code></pre>
+<p>Referring to your lecture slides for support, complete/write the following two tests:</p>
+<ul>
+<li>testSetTitle()</li>
+<li>testToString()</li>
+</ul>
+<p>Are all your tests passing?  If so, move onto the next step, otherwise revisit the tests and fix them.</p>
+<h2>Solution for DVDTest.java</h2>
+<ul>
+<li><a href="archives/DVDTest.java">DVDTest.java</a></li>
+</ul>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Library">
+            <h1>Testing the Library class</h1>
+<p>In this practical, you will create a test class for Library.java (which will also test the XML loading and storing). </p>
+<h2>Creating LibraryTest.java</h2>
+<p><em>In this section, you may need to refer to your lecture slides for support (i.e. the fifth slide deck).</em></p>
+<p>Within your DVDLibrary4.0 project, open Library.java.  Click above the <strong>public class Library</strong> declaration and when the light bulb appears, click on it and select <strong>Create Test</strong>.  Choose to generate the following methods:</p>
+<p><img src="./img/07.png" alt=""> </p>
+<p>The following code will be generated:</p>
+<pre><code class="lang-java">import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class LibraryTest {
+
+    @BeforeEach
+    void setUp() {
+    }
+
+    @AfterEach
+    void tearDown() {
+    }
+
+    @Test
+    void add() {
+    }
+
+    @Test
+    void getDVDs() {
+    }
+
+    @Test
+    void setDVDs() {
+    }
+
+    @Test
+    void listDVDs() {
+    }
+
+    @Test
+    void load() {
+    }
+
+    @Test
+    void save() {
+    }
+}</code></pre>
+<h2>Refactoring the test method: add</h2>
+<p>Add an instance field to LibraryTest:</p>
+<pre><code class="lang-java">    private Library library;</code></pre>
+<p>Then update the setUp and tearDown methods with this code:</p>
+<pre><code class="lang-java">    @BeforeEach
+    void setUp() {
+        library = new Library();
+    }
+
+    @AfterEach
+    void tearDown() {
+        library = null;
+    }</code></pre>
+<p>Now refactor the test <em>add</em> method:</p>
+<pre><code class="lang-java">    @Test
+    void add() {
+
+        //Testing the ArrayList is Empty
+        assertEquals(0, library.getDVDs().size());
+
+        //Testing the adding of the first dvd and making sure the title
+        //was setup correctly.
+        library.add(new DVD(&quot;The Avengers&quot;));
+        assertEquals(1, library.getDVDs().size());
+        assertEquals(&quot;The Avengers&quot;, library.getDVDs().get(0).getTitle());
+
+        //Testing the adding of a second dvd
+        library.add(new DVD(&quot;Peppa Pig&quot;));
+        assertEquals(2, library.getDVDs().size());
+        assertEquals(&quot;Peppa Pig&quot;, library.getDVDs().get(1).getTitle());
+    }</code></pre>
+<p>Run this test...if it is passing, move onto the next test method.  If it isn&#39;t passing, then return to your code and test to figure out where the issue is.</p>
+<h2>Refactoring the test methods: getDVDs</h2>
+<p>Update the instance fields in LibraryTest to the following:</p>
+<pre><code class="lang-java">    private Library library, populatedLibrary;
+    private DVD dvd1, dvd2, dvd3;
+    private ArrayList&lt;DVD&gt; emptyDVDs, populatedDVDs;</code></pre>
+<p>Use IntelliJ&#39;s <em>ALT+Enter</em> to import the ArrayList class.</p>
+<p>Refactor the setUp method to be (note that the comments explain what each object is used for):</p>
+<pre><code class="lang-java">    @BeforeEach
+    void setUp() {
+        //A Library object that will be empty at the beginning of each test
+        library = new Library();
+
+        //An empty ArrayList of DVDs created independently of the Library class.
+        //This will be used to compare with the ArrayList created in Library.
+        emptyDVDs = new ArrayList&lt;DVD&gt;();
+
+        //A populated ArrayList of DVDs created independently of the Library class.
+        //This will be used to compare with the ArrayList created in Library.
+        populatedDVDs = new ArrayList&lt;DVD&gt;();
+        dvd1 = new DVD(&quot;The Hobbit(Director)&quot;);  //title with 20 characters
+        dvd2 = new DVD(&quot;The Steve Jobs Film&quot;);   //title with 19 characters
+        dvd3 = new DVD(&quot;Avatar: Directors Cut&quot;); //title with 21 characters
+        populatedDVDs.add(dvd1);
+        populatedDVDs.add(dvd2);
+        populatedDVDs.add(dvd3);
+
+        //A Library object that will be populated with three DVDs at the beginning of each test
+        populatedLibrary = new Library();
+        populatedLibrary.setDVDs(populatedDVDs);
+    }</code></pre>
+<p>And the tearDown method to this:</p>
+<pre><code class="lang-java">    @AfterEach
+    void tearDown() {
+        library = populatedLibrary = null;
+        dvd1 = dvd2 = dvd3 = null;
+        populatedDVDs = emptyDVDs = null;
+    }</code></pre>
+<p>Now update the getDVDs method:</p>
+<pre><code class="lang-java">    @Test
+    void getDVDs() {
+        //The new library object size is zero
+        assertEquals(0, library.getDVDs().size());
+        //The new library object returns an empty ArrayList of DVDs
+        assertEquals(emptyDVDs, library.getDVDs());
+
+        //The populated library object size is three DVDs
+        assertEquals(3, populatedLibrary.getDVDs().size());
+        //The populated library object returns an ArrayList with three DVDs
+        assertEquals(populatedDVDs, populatedLibrary.getDVDs());
+    }</code></pre>
+<p>Run all tests in this test class...if they are passing, move onto the next test method.  If they aren&#39;t passing, then return to your code and test to figure out where the issue is.</p>
+<h2>Refactoring the test methods: setDVDs</h2>
+<p>Above, we set up all the test data we need for testing setDVDs().</p>
+<p>Update the setDVDs method with the following code:</p>
+<pre><code class="lang-java">    @Test
+    void setDVDs() {
+        //The new library object size is zero.  Set the DVDs
+        //ArrayList to an empty list; zero should still be returned
+        assertEquals(0, library.getDVDs().size());
+        library.setDVDs(emptyDVDs);
+        assertEquals(0, library.getDVDs().size());
+
+        //Now set the DVDs ArrayList with the populatedDVDs.
+        //3 should still be returned
+        library.setDVDs(populatedDVDs);
+        assertEquals(3, library.getDVDs().size());
+        //The contents of the library DVDs should also be the
+        //same as the populatedDVDs.
+        assertEquals(populatedDVDs, library.getDVDs());
+    }</code></pre>
+<p>Are all your tests running successfully?  If so, move onto the next test, otherwise revisit the tests and fix them.</p>
+<h2>Refactoring the test methods: listDVDs()</h2>
+<p>Above, we set up all the test data we need for testing listDVDs().</p>
+<p>Update the listDVDs method with the following code:</p>
+<pre><code class="lang-java">    @Test
+    void listDVDs() {
+        //The new library object returns an empty String
+        assertEquals(&quot;No DVDs.&quot;, library.listDVDs());
+
+        //The populated library object returns an String listing three DVDs
+        assertEquals(&quot;0:DVD Title is: The Hobbit(Director)\n&quot;
+                        + &quot;1:DVD Title is: The Steve Jobs Film\n&quot;
+                        + &quot;2:DVD Title is: Avatar: Directors Cu\n&quot;,
+                populatedLibrary.listDVDs());
+    }</code></pre>
+<p>Are all your tests running successfully?  If so, move onto the next test, otherwise revisit the tests and fix them.</p>
+<h2>Refactoring the save and load test methods</h2>
+<p>Above, we set up all the test data we need for testing XML persistence</p>
+<p>Delete the two generated methods: load() and save(); we are going to do the persistence testing in one method.</p>
+<p>Add the following method to your LibraryTest.java method:</p>
+<pre><code class="lang-java">    @Test
+    public void testSaveAndLoad() throws Exception
+    {
+        //TESTING AN EMPTY ARRAYLIST
+        //--------------------------
+        //Saving a new library object with an empty ArrayList of DVD
+        assertEquals(0, library.getDVDs().size());
+        assertEquals(emptyDVDs, library.getDVDs());
+        library.save();
+        //Load the file into another library object and compare it to emptyDVDs
+        Library library2 = new Library();
+        library2.load();
+        assertEquals(library2.getDVDs().size(), library.getDVDs().size());
+
+        //TESTING A POPULATED ARRAYLIST
+        //-----------------------------
+        //Saving a library object with a populated ArrayList of DVD
+        assertEquals(3, populatedLibrary.getDVDs().size());
+        assertEquals(populatedDVDs, populatedLibrary.getDVDs());
+        populatedLibrary.save();
+        //Load the file into another library object and compare it to populatedLibrary
+        Library library3 = new Library();
+        library3.load();
+        assertEquals(library3.getDVDs().size(), populatedLibrary.getDVDs().size());
+        assertEquals(library3.getDVDs().get(1).getTitle(), populatedLibrary.getDVDs().get(1).getTitle());
+        assertEquals(library3.getDVDs().get(2).getTitle(), populatedLibrary.getDVDs().get(2).getTitle());
+    }</code></pre>
+<p>Are all your tests running successfully?  If not,  revisit the tests and fix them.</p>
+<h2>Solution for LibraryTest.java</h2>
+<ul>
+<li><a href="archives/LibraryTest.java">LibraryTest.java</a></li>
+</ul>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="TestLargest">
+            <h1>Test Largest</h1>
+<p>In lecture 4 of this topic, we covered testing a static method called TestLargest.  We had some errors in the code and we watched how we could pick up these errors using best-practice Test Driven Development practices and approaches. </p>
+<p>Download the TestLargest code from <a href="archives/TestLargest.zip">here</a> and experiment with generating these errors and the effect they have on the JUnit tests.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Solution">
+            <h1>Solutions</h1>
+<p>The solution to DVDLibrary4.0 can be found <a href="archives/DVDLibraryV4.0.zip">here</a>.</p>
+
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+  <br>
+  <script>
+    $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+    $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+  </script>
+
+
+
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right small menu">
+      <div class="ui tiny basic message segment">
+         Powered by <a href="https://github.com/edeleastar/tutors-ts">tutors-ts.</a> 
+      </div>
+    </div>
+  </div>
+
+  </body>
+
+</html>

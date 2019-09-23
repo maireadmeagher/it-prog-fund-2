@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css"
+          type="text/css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"
+          rel="stylesheet"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      
+
+body {
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+  font-size:90%;
+  color: black;
+}
+
+p {
+  margin: 0.5em;
+}
+
+pre code {
+  font-family: "Monaco";
+  font-size: 100%;
+}
+
+img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin:10px;
+}
+
+h1, h2, h3 {
+  border-bottom:thin solid black;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+h1 {
+  font-style:italic;
+  font-size:130%;
+}
+
+h2 {
+  font-size:110%;
+}
+
+h3 {
+  font-size:100%;
+}
+
+
+
+      
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.footer {
+  background: white;
+  text-align: right;
+}
+.content {
+  flex: 1;
+  overflow: auto;
+}
+
+
+
+    </style>
+  </head>
+
+  
+  
+
+  <div class="ui fixed top pointing inverted stackable menu labmenu">
+    <header class="header item">
+      <i id="toc" class="sitemap icon"></i>
+      
+        <a href="../../index.html"> Labs  </a>
+      
+    </header>
+    <div class="right tab-menu menu">
+      
+        <a class="item" data-tab="Lab-04a">
+          Lab-04a
+        </a>
+      
+        <a class="item" data-tab="Demo">
+          Demo
+        </a>
+      
+        <a class="item" data-tab="Exercises">
+          Exercises
+        </a>
+      
+        <a class="item" data-tab="Solution">
+          Solution
+        </a>
+      
+    </div>
+  </div>
+
+
+  
+
+  <div class="ui pushable">
+    <div class="ui inverted labeled icon left inline vertical sidebar menu">
+      <br><br>
+      
+        
+          
+            <a class="item"
+               href="/topic00-assignments/book-a/index.html">Assignment1 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic00-assignments/book-b/index.html">Assignment2 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic00-assignments/book-c/index.html">RepeatAssignment </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic01-IntelliJ-JVM-and-IO/unit-01b-labs/book-a-install/index.html">Lab-01a </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic01-IntelliJ-JVM-and-IO/unit-01b-labs/book-b-example/index.html">Lab-01b </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic02-primitive-arrays/unit-02b-labs/book-1-array-exercises/index.html">Lab-02a </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic02-primitive-arrays/unit-02b-labs/book-2-shop-v2.x/index.html">Lab-02b </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic03-arraylists/unit-03b-labs/book-1-arraylists/index.html">Lab-03 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic04-menu-and-crud/unit-04b-labs/book-1-loop-exercises/index.html">Lab-04a </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic04-menu-and-crud/unit-04b-labs/book-2-crud/index.html">Lab-04b </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic05-persistence-xml-exceptions/unit-05b-labs/book-xml-exceptions/index.html">Lab-05 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic06-collections-map-set/unit-06b-labs/book/index.html">Lab-06 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic07-inher-polym/unit-07b-labs/book/index.html">Lab-07 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic08-abstraction/unit-08b-labs/book-1-abstraction/index.html">Lab-08 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic09-interfaces/unit-09b-labs/book-interfaces/index.html">Lab-09 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic10-TDD-and-JUnit/unit-10b-labs/book-tdd/index.html">Lab-10 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic11-additional-material/unit-11b-labs/book-1-shopv6/index.html">ShopV6.0 </a>
+          
+        
+      
+    </div>
+    <div class="pusher" tabindex="-1">
+      <div class="ui basic segment">
+        <br>
+        
+          <div class="ui tab segment lab" data-tab="Lab-04a">
+            <h1>Objectives</h1>
+<p>ArrayList · loops</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Demo">
+            <h1>Demo Exercise</h1>
+<p>This step introduces a way to write and check your exercises on IntelliJ.</p>
+<p>For each exercise, you should write the code in its own method and give it a similiar method header similar to this:</p>
+<pre><code class="lang-java">    private void simpleWhile()</code></pre>
+<h2>SimpleWhile Exercise</h2>
+<p>Perform these steps:</p>
+<ul>
+<li><p>In IntelliJ, create a new Project called <strong>LoopExercises</strong>.</p>
+</li>
+<li><p>Create a class in this Project called <strong>Loops</strong>.   In this class, add the following code:</p>
+</li>
+</ul>
+<pre><code class="lang-java">import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Loops {
+
+    ArrayList&lt;String&gt; strings;
+    Scanner input = new Scanner(System.in);
+
+    public static void main(String args[]){
+        Loops loops = new Loops();
+        loops.simpleWhile();
+    }
+
+    private void simpleWhile() {
+
+        System.out.println(&quot;This method will print 1 to 10 to the console:&quot;);
+
+        int i = 1;
+        while (i &lt;= 10){
+            System.out.println(i);
+            i++;
+        }
+    }</code></pre>
+<p>This method, simpleWhile, will print out 1 to 10 to the console.  Note that it is invoked from the main method, just after the constructor.</p>
+<p>Note that Scanner and ArrayList objects are there for the exercises in the next step; we are not using them here.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Exercises">
+            <h1>Exercises</h1>
+<p>Attempt the following exercises on loops.  For each exercise:</p>
+<ul>
+<li><p>Add a method to the Loops class (as was done in the demo step).</p>
+</li>
+<li><p>use the global Scanner object to read in data from the user, if required.</p>
+</li>
+<li><p>call your writen method from the main class (and comment out calls to other methods).</p>
+</li>
+<li><p>Remember, the object of this lab is to give you practice with loops in an ArrayList context.  So it is important you utilise loops throughout.</p>
+</li>
+</ul>
+<p><em>You may need to refer back to your lecture notes during this lab</em></p>
+<h2>Exercise 1 - n-times loops</h2>
+<p>Write a method to:</p>
+<ul>
+<li>read in 6 Strings into an ArrayList of String (use an n-times while loop for this)</li>
+<li>and then print the values out (use an n-times for loop here)</li>
+</ul>
+<p>Call this method exercise_1 and don&#39;t forget to instantiate the ArrayList (we have done it here for you):</p>
+<pre><code class="lang-java">    private void exercise_1(){
+        strings = new ArrayList&lt;&gt;();
+        //code goes here!
+    }</code></pre>
+<h2>Exercise 2 - for each loop</h2>
+<p>Copy your exercise_1 method and paste it as exercise_2.</p>
+<p>Now rewrite:</p>
+<ul>
+<li>the reading of the strings to use an n-times for loop</li>
+<li>and the printing of the value to use a for-each loop</li>
+</ul>
+<p>Now call this new method from the main method.  There should be no visible difference from the console perspective; we only changed the internal workings of the code.</p>
+<h2>Exercise 3 - sentinel based loops</h2>
+<p>In the previous exercises, we took in 6 strings.  In this one, we will use a sentinel to stop the input of Strings.  This will let the user decide how many Strings they want to enter.</p>
+<p>Copy your exercise_1 method and paste it as exercise_3.</p>
+<p>Now rewrite: </p>
+<ul>
+<li><p>the reading of the strings to be controlled by a sentinel based while loop where the String &quot;-end&quot; ends the intake of data from the console.  Remember to use the .equals() method when testing for equality. </p>
+</li>
+<li><p>the printing of the strings to use a for each loop.</p>
+</li>
+</ul>
+<p>Your console output should look something like this:</p>
+<p><img src="./img/01.png" alt=""></p>
+<h2>Exercise 4 - flag based loops</h2>
+<p>In the previous exercise, we used a sentinel value to end the loop (i.e. &quot;-end&quot;).  In this version, we will end the input when the user enters a string that <strong>starts with</strong> &quot;end&quot;.  But we will construct it using a flag-based loop rather than a sentinel-based loop.  You can copy the exercise_3 method and paste it as exercise_4.<br>Your console output should look something like this:</p>
+<p><img src="./img/02.png" alt=""></p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Solution">
+            <h1>Solution</h1>
+<p>The solution to these exercises <a href="archives/LoopExercises.zip">is here</a>.</p>
+
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+  <br>
+  <script>
+    $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+    $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+  </script>
+
+
+
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right small menu">
+      <div class="ui tiny basic message segment">
+         Powered by <a href="https://github.com/edeleastar/tutors-ts">tutors-ts.</a> 
+      </div>
+    </div>
+  </div>
+
+  </body>
+
+</html>

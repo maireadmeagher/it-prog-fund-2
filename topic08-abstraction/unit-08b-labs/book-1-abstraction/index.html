@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css"
+          type="text/css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"
+          rel="stylesheet"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      
+
+body {
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+  font-size:90%;
+  color: black;
+}
+
+p {
+  margin: 0.5em;
+}
+
+pre code {
+  font-family: "Monaco";
+  font-size: 100%;
+}
+
+img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin:10px;
+}
+
+h1, h2, h3 {
+  border-bottom:thin solid black;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+h1 {
+  font-style:italic;
+  font-size:130%;
+}
+
+h2 {
+  font-size:110%;
+}
+
+h3 {
+  font-size:100%;
+}
+
+
+
+      
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.footer {
+  background: white;
+  text-align: right;
+}
+.content {
+  flex: 1;
+  overflow: auto;
+}
+
+
+
+    </style>
+  </head>
+
+  
+  
+
+  <div class="ui fixed top pointing inverted stackable menu labmenu">
+    <header class="header item">
+      <i id="toc" class="sitemap icon"></i>
+      
+        <a href="../../index.html"> Labs  </a>
+      
+    </header>
+    <div class="right tab-menu menu">
+      
+        <a class="item" data-tab="Lab-08">
+          Lab-08
+        </a>
+      
+        <a class="item" data-tab="01">
+          01
+        </a>
+      
+        <a class="item" data-tab="02">
+          02
+        </a>
+      
+    </div>
+  </div>
+
+
+  
+
+  <div class="ui pushable">
+    <div class="ui inverted labeled icon left inline vertical sidebar menu">
+      <br><br>
+      
+        
+          
+            <a class="item"
+               href="/topic00-assignments/book-a/index.html">Assignment1 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic00-assignments/book-b/index.html">Assignment2 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic00-assignments/book-c/index.html">RepeatAssignment </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic01-IntelliJ-JVM-and-IO/unit-01b-labs/book-a-install/index.html">Lab-01a </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic01-IntelliJ-JVM-and-IO/unit-01b-labs/book-b-example/index.html">Lab-01b </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic02-primitive-arrays/unit-02b-labs/book-1-array-exercises/index.html">Lab-02a </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic02-primitive-arrays/unit-02b-labs/book-2-shop-v2.x/index.html">Lab-02b </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic03-arraylists/unit-03b-labs/book-1-arraylists/index.html">Lab-03 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic04-menu-and-crud/unit-04b-labs/book-1-loop-exercises/index.html">Lab-04a </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic04-menu-and-crud/unit-04b-labs/book-2-crud/index.html">Lab-04b </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic05-persistence-xml-exceptions/unit-05b-labs/book-xml-exceptions/index.html">Lab-05 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic06-collections-map-set/unit-06b-labs/book/index.html">Lab-06 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic07-inher-polym/unit-07b-labs/book/index.html">Lab-07 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic08-abstraction/unit-08b-labs/book-1-abstraction/index.html">Lab-08 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic09-interfaces/unit-09b-labs/book-interfaces/index.html">Lab-09 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic10-TDD-and-JUnit/unit-10b-labs/book-tdd/index.html">Lab-10 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic11-additional-material/unit-11b-labs/book-1-shopv6/index.html">ShopV6.0 </a>
+          
+        
+      
+    </div>
+    <div class="pusher" tabindex="-1">
+      <div class="ui basic segment">
+        <br>
+        
+          <div class="ui tab segment lab" data-tab="Lab-08">
+            <h1>Objectives</h1>
+<p>Social Network app · Abstraction</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="01">
+            <h1>Network-V5</h1>
+<p>In this step, you will create version 5 of the Network system (our menu driven messaging system).  In this version, you will use abstraction in the inheritance hierarchy.</p>
+<h2>Abstraction in Network-V5</h2>
+<p>In IntelliJ, create a new project called Network-V5.</p>
+<p>Copy the following classes into this new project:</p>
+<pre><code>- [PhotoPost](archives/v4/PhotoPost.java)
+- [MessagePost](archives/v4/MessagePost.java)
+- [Post](archives/v4/Post.java)
+- [NewsFeed](archives/v4/NewsFeed.java)
+- [Driver](archives/v4/Driver.java)</code></pre>
+<p>Make the Post class abstract and add an abstract method called <em>displayExtract()</em> to it. The return type of this method should be a String. </p>
+<p>In Post&#39;s subclasses, you will need to provide the concrete implementation for this method; this will eliminate the compile errors that we have now generated!  </p>
+<h3>Message Post code:</h3>
+<pre><code class="lang-java">    public String displayExtract()
+    {
+        return &quot;Message extract: &quot;+ message.substring(0,10) + &quot;....&quot;;
+    }</code></pre>
+<h3>PhotoPost code:</h3>
+<pre><code class="lang-java">    public String displayExtract()
+    {
+        return &quot;Photo caption: &quot; + caption.substring(0,10) + &quot;....&quot;;
+    }</code></pre>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="02">
+            <h1>Network-V5</h1>
+<p>In this step, you will use the new method we just added.</p>
+<h2>NewsFeed</h2>
+<p>In your NewsFeed class, add the following method:</p>
+<pre><code class="lang-java">    public String showExtract()
+    {
+        String str = &quot;&quot;;
+        // display all posts
+        for(Post post : posts) {
+            str += post.displayExtract() + &quot;\n\n&quot;;
+        }
+        return str;
+    }</code></pre>
+<h2>Driver</h2>
+<p>In your Driver class, add a new menu option, number 4:</p>
+<pre><code class="lang-java">
+    private int mainMenu() {
+        System.out.println(&quot;1) Add a Text Post&quot;);
+        System.out.println(&quot;2) Add a Photo Post&quot;);
+        System.out.println(&quot;3) List all Posts&quot;);
+        System.out.println(&quot;4) List an extract of all Posts&quot;);
+        System.out.println(&quot;0) Exit&quot;);
+        System.out.print(&quot;==&gt;&gt;&quot;);
+        int option = sc.nextInt();
+        return option;
+    }</code></pre>
+<p>Then, in the run() method, add a new option 4 to the switch statement:</p>
+<pre><code class="lang-java">                switch (option) {
+                    case 1:
+                        addMessagePost();
+                        break;
+                    case 2:
+                        addPhotoPost();
+                        break;
+                    case 3:
+                        showPosts();
+                        break;
+                    case 4:
+                        showExtractPosts();
+                        break;
+                }</code></pre>
+<p>Finally, include this new method:</p>
+<pre><code class="lang-java">   public void showExtractPosts() {
+        System.out.println(newsFeed.showExtract());
+    }</code></pre>
+<h3>Save and Test your Code</h3>
+<p>Save your code.  </p>
+<p>Run your app.  Add a series of message and photo posts.  Then call option 3 to display all the posts.  Now call option 4 to display an extract of your posts.  You should now see the difference between the two menu options. </p>
+<h3>Solution</h3>
+<p>Solution: <a href="archives/network-solution-v5.zip">Network-V5</a>. </p>
+
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+  <br>
+  <script>
+    $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+    $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+  </script>
+
+
+
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right small menu">
+      <div class="ui tiny basic message segment">
+         Powered by <a href="https://github.com/edeleastar/tutors-ts">tutors-ts.</a> 
+      </div>
+    </div>
+  </div>
+
+  </body>
+
+</html>

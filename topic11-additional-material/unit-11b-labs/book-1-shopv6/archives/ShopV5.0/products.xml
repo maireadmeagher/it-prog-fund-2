@@ -1,0 +1,16 @@
+<object-stream>
+  <list>
+    <Product>
+      <productName>24 inch monotir</productName>
+      <productCode>3243</productCode>
+      <unitCost>23.55</unitCost>
+      <inCurrentProductLine>true</inCurrentProductLine>
+    </Product>
+    <Product>
+      <productName>tv</productName>
+      <productCode>4643</productCode>
+      <unitCost>76.87</unitCost>
+      <inCurrentProductLine>false</inCurrentProductLine>
+    </Product>
+  </list>
+</object-stream>

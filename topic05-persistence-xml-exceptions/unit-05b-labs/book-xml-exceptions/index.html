@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css"
+          type="text/css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"
+          rel="stylesheet"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      
+
+body {
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+  font-size:90%;
+  color: black;
+}
+
+p {
+  margin: 0.5em;
+}
+
+pre code {
+  font-family: "Monaco";
+  font-size: 100%;
+}
+
+img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin:10px;
+}
+
+h1, h2, h3 {
+  border-bottom:thin solid black;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+h1 {
+  font-style:italic;
+  font-size:130%;
+}
+
+h2 {
+  font-size:110%;
+}
+
+h3 {
+  font-size:100%;
+}
+
+
+
+      
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.footer {
+  background: white;
+  text-align: right;
+}
+.content {
+  flex: 1;
+  overflow: auto;
+}
+
+
+
+    </style>
+  </head>
+
+  
+  
+
+  <div class="ui fixed top pointing inverted stackable menu labmenu">
+    <header class="header item">
+      <i id="toc" class="sitemap icon"></i>
+      
+        <a href="../../index.html"> Labs  </a>
+      
+    </header>
+    <div class="right tab-menu menu">
+      
+        <a class="item" data-tab="Lab-05">
+          Lab-05
+        </a>
+      
+        <a class="item" data-tab="01">
+          01
+        </a>
+      
+        <a class="item" data-tab="02">
+          02
+        </a>
+      
+        <a class="item" data-tab="03">
+          03
+        </a>
+      
+        <a class="item" data-tab="04">
+          04
+        </a>
+      
+        <a class="item" data-tab="05">
+          05
+        </a>
+      
+        <a class="item" data-tab="06">
+          06
+        </a>
+      
+        <a class="item" data-tab="Solutions">
+          Solutions
+        </a>
+      
+    </div>
+  </div>
+
+
+  
+
+  <div class="ui pushable">
+    <div class="ui inverted labeled icon left inline vertical sidebar menu">
+      <br><br>
+      
+        
+          
+            <a class="item"
+               href="/topic00-assignments/book-a/index.html">Assignment1 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic00-assignments/book-b/index.html">Assignment2 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic00-assignments/book-c/index.html">RepeatAssignment </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic01-IntelliJ-JVM-and-IO/unit-01b-labs/book-a-install/index.html">Lab-01a </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic01-IntelliJ-JVM-and-IO/unit-01b-labs/book-b-example/index.html">Lab-01b </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic02-primitive-arrays/unit-02b-labs/book-1-array-exercises/index.html">Lab-02a </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic02-primitive-arrays/unit-02b-labs/book-2-shop-v2.x/index.html">Lab-02b </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic03-arraylists/unit-03b-labs/book-1-arraylists/index.html">Lab-03 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic04-menu-and-crud/unit-04b-labs/book-1-loop-exercises/index.html">Lab-04a </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic04-menu-and-crud/unit-04b-labs/book-2-crud/index.html">Lab-04b </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic05-persistence-xml-exceptions/unit-05b-labs/book-xml-exceptions/index.html">Lab-05 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic06-collections-map-set/unit-06b-labs/book/index.html">Lab-06 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic07-inher-polym/unit-07b-labs/book/index.html">Lab-07 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic08-abstraction/unit-08b-labs/book-1-abstraction/index.html">Lab-08 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic09-interfaces/unit-09b-labs/book-interfaces/index.html">Lab-09 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic10-TDD-and-JUnit/unit-10b-labs/book-tdd/index.html">Lab-10 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="/topic11-additional-material/unit-11b-labs/book-1-shopv6/index.html">ShopV6.0 </a>
+          
+        
+      
+    </div>
+    <div class="pusher" tabindex="-1">
+      <div class="ui basic segment">
+        <br>
+        
+          <div class="ui tab segment lab" data-tab="Lab-05">
+            <h1>Objectives</h1>
+<p>XML · Exception Handling · Validate User Input · ShopV5.0 · DVD3.0</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="01">
+            <h1>Developing Shop V5.0</h1>
+<p>In this practical, you will create a new project called ShopV5.0, based on ShopV4.0.  You will update the Driver, Store and Product classes (linked below) to enable the user to save the products to an XML file and also reload them (see Figure 1 for the updated menu system in ShopV5.0).</p>
+<p><img src="./img/00.png" alt=""> </p>
+<h2>Menu Items 9 and 10:  Saving and Loading Products</h2>
+<p>In IntelliJ, create a new project called ShopV5.0.</p>
+<p>Copy the following classes into the project:</p>
+<ul>
+<li><p><a href="archives/Driver.java">Driver.java</a></p>
+</li>
+<li><p><a href="archives/Store.java">Store.java</a></p>
+</li>
+<li><p><a href="archives/Product.java">Product.java</a></p>
+</li>
+</ul>
+<h2>Setting up the Component for Serializing</h2>
+<p>Download the following XStream jar file from:</p>
+<ul>
+<li><a href="archives/xstream-1.4.10.jar">xstream-1.4.10.jar</a> </li>
+</ul>
+<p>In IntelliJ, on the ShopV5.0 project, right click and select <strong>New</strong>, followed by <strong>Directory</strong>.  Call the new directory <strong>lib</strong>.  Drag the xstream jar file already downloaded into the lib folder.</p>
+<p>Your workspace should look like this:</p>
+<p><img src="img/xml01.png" alt=""></p>
+<p>From <strong>File</strong> menu, select <strong>Project Structure</strong>.  Click on <strong>Libraries</strong>.  To add a library to your build path, click on the green + : </p>
+<p><img src="img/xml02.png" alt=""></p>
+<p>Select Java and locate your library…click OK (a few times!).</p>
+<h2>Updating Store Class to serialize and deserialize products</h2>
+<p>In the Store class, create these two new methods:</p>
+<pre><code class="lang-java">    @SuppressWarnings(&quot;unchecked&quot;)
+    public void load() throws Exception
+    {
+        XStream xstream = new XStream(new DomDriver());
+        ObjectInputStream is = xstream.createObjectInputStream(new FileReader(&quot;products.xml&quot;));
+        products = (ArrayList&lt;Product&gt;) is.readObject();
+        is.close();
+    }
+
+    public void save() throws Exception
+    {
+        XStream xstream = new XStream(new DomDriver());
+        ObjectOutputStream out = xstream.createObjectOutputStream(new FileWriter(&quot;products.xml&quot;));
+        out.writeObject(products);
+        out.close();    
+    }</code></pre>
+<p>You will notice that they don&#39;t compile; they are missing some needed packages.  Import the following packages at the top of the store class (or use IntelliJ&#39;s ALT+Enter to automatically add them):</p>
+<pre><code class="lang-java">import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.DomDriver;</code></pre>
+<h2>Adding load and save functionality to the menu</h2>
+<p>In the Driver class, add options 9 and 10 to the printed menu:</p>
+<p><img src="./img/03.png" alt=""> </p>
+<p>In the Driver class, make the following changes to implement case 9 and 10: </p>
+<p><img src="./img/04.png" alt=""> </p>
+<h2>Testing the load and store</h2>
+<p>You should be in a position now to test.  </p>
+<p>Start your app and create two products e.g.</p>
+<pre><code>Please enter the product description: 24 inch monitor
+Please enter the product code: 3423
+Please enter the product cost: 129.99
+Is this product in your current line (y/n): y
+
+Please enter the product description: 14 inch monitor
+Please enter the product code: 2322
+Please enter the product cost: 109.99
+Is this product in your current line (y/n): y</code></pre>
+<p>Now try option 9 to save your products. <strong>Note: if you are using java 9, 10 or 11 you are probably getting a series of red warning messages...the products will be saved, but they will still produce the warnings.  The next step will show you how to suppress these warnings</strong>.  </p>
+<p>You should now see a products.xml file appearing in the root of your project.  </p>
+<p>Open this file and it should contain something similar to this:</p>
+<pre><code class="lang-xml">&lt;object-stream&gt;
+  &lt;list&gt;
+    &lt;Product&gt;
+      &lt;productName&gt;24 inch monitor&lt;/productName&gt;
+      &lt;productCode&gt;3423&lt;/productCode&gt;
+      &lt;unitCost&gt;129.99&lt;/unitCost&gt;
+      &lt;inCurrentProductLine&gt;true&lt;/inCurrentProductLine&gt;
+    &lt;/Product&gt;
+    &lt;Product&gt;
+      &lt;productName&gt;14 inch monitor&lt;/productName&gt;
+      &lt;productCode&gt;2322&lt;/productCode&gt;
+      &lt;unitCost&gt;109.99&lt;/unitCost&gt;
+      &lt;inCurrentProductLine&gt;true&lt;/inCurrentProductLine&gt;
+    &lt;/Product&gt;
+  &lt;/list&gt;
+&lt;/object-stream&gt;</code></pre>
+<p>Exit your application and run it again.</p>
+<p>Test option 10 and make sure that the saved products are loaded back into your products ArrayList correctly.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="02">
+            <h1>Java 9+ and XStream</h1>
+<p><em>This step ONLY applies if you are using JDK9 or later.  If you are using JDK8 or lower, you can move onto the next step.</em></p>
+<p>If you are using JDK9 or later , you are more than likely getting the following warning when saving/loading your products:</p>
+<p><img src="./img/error01.png" alt="">  </p>
+<p>However, your products.xml file will still be successfully saved and loaded; it is just a warning. </p>
+<h2>Getting rid of the warning</h2>
+<p>We can get rid of the warning by passing suppression messages to the VM when we run our application. To do this:</p>
+<ul>
+<li><p>From the <strong>Run</strong> menu, select <strong>Edit Configuratons...*</strong></p>
+</li>
+<li><p>In the <strong>VM Options</strong> box, paste in the following VM arguments:</p>
+</li>
+</ul>
+<pre><code>--add-opens java.base/java.util=ALL-UNNAMED 
+--add-opens java.base/java.lang.reflect=ALL-UNNAMED 
+--add-opens java.base/java.text=ALL-UNNAMED 
+--add-opens java.desktop/java.awt.font=ALL-UNNAMED</code></pre>
+<ul>
+<li>Click the <strong>OK</strong> button.  </li>
+</ul>
+<h2>Retesting</h2>
+<p>Rerun the app and try the save/load again...the warning message should now be suppresed.  You may get this one still, but you can ignore it:</p>
+<pre><code>Security framework of XStream not initialized, XStream is probably vulnerable.</code></pre>
+<p>Note that you will need to do this each time you create a new project, as the VM arguments will need to be updated.  However, if you copy/clone a project with it in it, the arguments will be retained. </p>
+<h2>A note on XStream and Java</h2>
+<p>Java 9 was released in September 2017.</p>
+<p>Java 10 was released in March 2018.  </p>
+<p>Java 11 was released in September 2018.</p>
+<p>However, the latest version of XStream (1.4.10) was released in May 2017, before the Java 9 changes.  When a new version of XStream is released, we probably won&#39;t have to pass these parameters to the VM.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="03">
+            <h1>Shop V5.0 - Exceptions</h1>
+<p>In this step, you will continue working on Shop V5.0. </p>
+<h2>Adding Exception Handling</h2>
+<p>In the Driver class, put a try and catch block around each potential read of data that could throw an exception (nextLine() and next() are ok).</p>
+<p>Revisit your lecture notes on this topic if you need guidance.</p>
+<p>Run your program and test your user input to ensure that your exception handling is correctly implemented e.g. enter String data when a double or int is expected.   </p>
+<h2>DRY code</h2>
+<p>Did you notice that your code is not DRY (Don&#39;t Repeat Yourself)?  Did you notice that you were doing the same thing over and over and over again for each readInt and readDouble? e.g. this is the product code read, which is incredibly similiar to the read of an index, etc</p>
+<pre><code class="lang-java">        int productCode = 0;
+        boolean goodInput = false;     //Loop  Control Variable
+        do {
+            try {
+                System.out.print(&quot;Enter the product code: &quot;);
+                productCode = input.nextInt();
+                goodInput = true;
+            }
+            catch (Exception e) {
+                input.nextLine();  //swallows Scanner bug
+                System.out.println(&quot;Num expected - you entered  text&quot;);
+            }
+        }  while (!goodInput);</code></pre>
+<p>We will now adopt a slightly different approach for reading in the int index number to delete/update from the user and also when reading in the double value in the method <em>printProductsAboveAPrice()</em>.</p>
+<h2>readNextInt(String prompt)</h2>
+<p>In the Driver, add this method that takes in a prompt (i.e. what you print to the user when asking them for data) and validates the input provided:</p>
+<pre><code class="lang-java">    private int readNextInt(String prompt) {
+        do {
+            var scanner = new Scanner(System.in);
+            try {
+                System.out.print(prompt);
+                return Integer.parseInt(scanner.next());
+            }
+            catch (NumberFormatException e) {
+                System.err.println(&quot;\tEnter a number please.&quot;);
+            }
+        }  while (true);
+    }</code></pre>
+<p>Then use this method to read in a valid <em>int</em> in the <em>updateProduct</em> method (and also the <em>deleteProduct</em> method) e.g.:</p>
+<pre><code class="lang-java">    private void updateProduct(){
+        //list the products
+        System.out.println(store.listProducts());
+
+        if (store.getProducts().size() &gt; 0) {
+            //only ask the user to choose a product if products exist
+            int index = readNextInt(&quot;Enter the index of the product to update ==&gt; &quot;);
+
+            if ((index &gt;= 0) &amp;&amp; (index &lt; store.getProducts().size())) {
+                //if the index is valid, gather new details for each field from the user
+
+                ///more code here</code></pre>
+<p>Save and rerun your app.  Test the update and delete code by entering a letter for the index number.  It should give you the error message &quot;Enter a number please&quot; and then allow you to enter a new number. </p>
+<p>Once you are happy with your app, try to refactor other nextInt reads so that they use this method instead.  You are now moving towards having DRY code.</p>
+<h2>readNextDouble(String prompt)</h2>
+<p>In the Driver, now add this method that takes in a prompt (i.e. what you print to the user when asking them for data) and validates the input provided:</p>
+<pre><code class="lang-java">    private double readNextDouble(String prompt) {
+        do {
+            var scanner = new Scanner(System.in);
+            try{
+                System.out.print(prompt);
+                return Double.parseDouble(scanner.next());
+            }
+            catch (NumberFormatException e) {
+                System.err.println(&quot;\tEnter a number please.&quot;);
+            }
+        }  while (true);
+    }</code></pre>
+<p>Then use the method here:</p>
+<pre><code class="lang-java">    private void printProductsAboveAPrice() {
+        double price = readNextDouble(&quot;View the product costing more than this price:  &quot;);
+        System.out.println(store.listProductsAboveAPrice(price));
+    }</code></pre>
+<p>Save and run your project and test these code changes.</p>
+<p>When you are happy that the code change is working as expected, try to refactor other nextDouble reads so that they use this method instead.  From the data validation perspective, you now have DRY code.</p>
+<h2>An interim solution</h2>
+<p>An interim solution to the ShopV5.0 exercise <a href="archives/ShopV5.0-interim.zip">is here</a> should you need in.   </p>
+<p>In the next step, we will use our new &quot;read&quot; methods to elimiate the annoying Scanner bug from our system.  This approach will also make our code much cleaner!</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="04">
+            <h1>Shop V5.0 - Eliminating the Scanner Bug</h1>
+<p>In this step, you will continue working on Shop V5.0.  Should you need it, the interim solution <a href="archives/ShopV5.0-interim.zip">is here</a>.</p>
+<p>In the previous step, we used two new &quot;read&quot; methods to repeatedly ask for valid <em>int</em> and <em>double</em> values.  You will notice that each method had it&#39;s own local Scanner object called <em>scanner</em>.</p>
+<p>Did you notice that these changes meant that we were pressing the enter key a lot to get, say, the menu to redisplay?</p>
+<h2>The Scanner Bug</h2>
+<p>There is a bug in the Java Scanner class - a String read is ignored straight after reading an int or a double.  </p>
+<p>We previously catered for this bug in our code by adding a second <em>input.nextLine()</em> statement after reading an int or a double. </p>
+<p>As each of the new &quot;read&quot; methods has its own local Scanner object called <em>scanner</em>, each call of this method will create a brand new scanner for reading every int and double --&gt; this will eliminate the bug. </p>
+<p>However, we now have a lot of those extra <em>input.nextLine()</em> statements that are no longer required e.g. in the below code, we have two input.nextLine() statements - we only need to have one now.</p>
+<pre><code class="lang-java">    private void runMenu() {
+        int option = mainMenu();
+        while (option != 0) {
+
+            //switch statements
+
+            //pause the program so that the user can read what we just printed to the terminal window
+            System.out.println(&quot;\nPress any key to continue...&quot;);
+            input.nextLine();
+            input.nextLine();  //this second read is required - bug in Scanner class; a String read is ignored straight after reading an int.
+
+            //display the main menu again
+            option = mainMenu();
+        }
+
+        //the user chose option 0, so exit the program
+        System.out.println(&quot;Exiting... bye&quot;);
+        System.exit(0);
+    }</code></pre>
+<p>Delete the extra statement and any other extra read statements in your code.  </p>
+<p>Retest your app.  Everything should work as expected and you shouldn&#39;t unnecessarily have to press the enter key twice.</p>
+<p>Should you need it, the solution without the scanner bug <a href="archives/ShopV5.0-NoScannerBug.zip">is here</a>.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="05">
+            <h1>Shop V5.0 - Utility Class</h1>
+<p>In this step, you will continue working on Shop V5.0.  Should you need it, the solution without the scanner bug <a href="archives/ShopV5.0-NoScannerBug.zip">is here</a>.</p>
+<p>Now that we have eliminated the Scanner bug using these methods, we would like to make these easily available for all projects we develop:</p>
+<pre><code class="lang-java">    private int readNextInt(String prompt) {
+        do {
+            var scanner = new Scanner(System.in);
+            try {
+                System.out.print(prompt);
+                return Integer.parseInt(scanner.next());
+            }
+            catch (NumberFormatException e) {
+                System.err.println(&quot;\tEnter a number please.&quot;);
+            }
+        }  while (true);
+    }
+
+    private double readNextDouble(String prompt) {
+        do {
+            var scanner = new Scanner(System.in);
+            try{
+                System.out.print(prompt);
+                return Double.parseDouble(scanner.next());
+            }
+            catch (NumberFormatException e) {
+                System.err.println(&quot;\tEnter a number please.&quot;);
+            }
+        }  while (true);
+    }</code></pre>
+<h2>Developing the ScannerInput utility class</h2>
+<p>Create a new class called <strong>ScannerInput.java</strong>.</p>
+<p>Cut the two methods above from the Driver.java class and paste them into the new ScannerInput.java class.</p>
+<p>You will notice that Driver.java no longer compiles as it cannot find/use the methods we moved to ScannerInput.java.</p>
+<p>To fix this, first make the ScannerInput methods public and <em>static</em>.  You can do this by changing their method signatures like this:</p>
+<pre><code class="lang-java">public static int readNextInt(String prompt) {
+public static double readNextDouble(String prompt) {</code></pre>
+<h2>Fixing Driver.java</h2>
+<p>Static means that we don&#39;t have to create an object of ScannerInput in order to use these methods...they belong at class level.  We can just call the methods using something like this:</p>
+<pre><code class="lang-java">ScannerInput.readNextInt(&quot;Enter the product code: &quot;);</code></pre>
+<p>Make this change for all the readNextInt and readNextDouble.  Notice that IntelliJ, when you click on the non-compiling method will also suggest this fix (use Alt+Enter as the quick fix for each offending method).  </p>
+<p>Run your app again and make sure all is working as expected.</p>
+<p>Now you can copy this ScannerInput.java file into any project you create from here on in.  We will do that with the DVD app in the next step.</p>
+<h2>Solution</h2>
+<p>Should you need it, the solution with the ScannerInput class <a href="archives/ShopV5.0.zip">is here</a>.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="06">
+            <h1>Menu Driven DVD Specification (Phase 3)</h1>
+<p>In this practical, you will create a new project and copy in the code from <strong>DVDLibraryV2.0</strong>.  You will then extend the code to allow the user to save the DVDs to an XML file and to load the DVDs from an XML file.   We will also bring in our new ScannerInput file to prevent our app from crashing if the user enters invalid numeric data on the console.</p>
+<ul>
+<li><p>Create a new project called <strong>DVDLibraryV3.0</strong>.</p>
+</li>
+<li><p>In your Windows Explorer / Mac Finder, copy the <strong>src</strong> java files from <strong>DVDLibraryV2.0</strong> to the <strong>src</strong> folder in your new project,  <strong>DVDLibraryV3.0</strong>.</p>
+</li>
+<li><p>NOTE:  a copy of the completed <strong>DVDLibraryV2.0</strong> <a href="archives/DVDLibraryV2.0.zip">is available here should you need it</a>.</p>
+</li>
+</ul>
+<h2>Setting up the XML Component for Serializing</h2>
+<p>Download the following XStream jar file and incorporate it into your DVDLibraryV3.0 project:</p>
+<ul>
+<li><a href="../book/archives/xstream-1.4.10.jar">xstream-1.4.10.jar</a> </li>
+</ul>
+<h2>Library class</h2>
+<p>In the Library class:</p>
+<ul>
+<li><p>add a load() method that throws an Exception.  This method should read the contents of the dvd.xml file into the ArrayList of DVDs.</p>
+</li>
+<li><p>add a save() method that throws an Exception.  This method should write the contents of the ArrayList of DVDs to the dvd.xml file.</p>
+</li>
+</ul>
+<h2>Driver class - Save DVDs</h2>
+<p>Add a fifth option to the menu:  <em>5) Save DVDs to dvds.xml.</em></p>
+<p>Add a case 5 to the switch statement.  Then, within a try and catch block, call the save() method you wrote in the Library class.</p>
+<h2>Driver class - Load DVDs</h2>
+<p>Add a sixth option to the menu:  <em>6) Load DVDs from dvds.xml.</em></p>
+<p>Add a case 6 to the switch statement.  Then, within a try and catch block, call the load() method you wrote in the Library class.</p>
+<h2>Test your code</h2>
+<p>Run the project.</p>
+<ul>
+<li><p>Test option 5 and make sure that your DVDs are stored to an XML file.  </p>
+</li>
+<li><p>You should have a new XML file that looks something like this:</p>
+</li>
+</ul>
+<pre><code class="lang-XML">&lt;object-stream&gt;
+  &lt;list&gt;
+    &lt;DVD&gt;
+      &lt;title&gt;The Matrix&lt;/title&gt;
+    &lt;/DVD&gt;
+    &lt;DVD&gt;
+      &lt;title&gt;Sicario&lt;/title&gt;
+    &lt;/DVD&gt;
+    &lt;DVD&gt;
+      &lt;title&gt;The Grinch&lt;/title&gt;
+    &lt;/DVD&gt;
+  &lt;/list&gt;
+&lt;/object-stream&gt;</code></pre>
+<p>Exit your application and run it again.</p>
+<ul>
+<li>Test option 6 and make sure that your DVDs are loaded back into your dvd ArrayList correctly.</li>
+</ul>
+<h2>ScannerInput</h2>
+<p>This app is only reading ints (at the moment) and no doubles.  </p>
+<p>However, it doesn&#39;t stop us using our new ScannerInput.java class - we are future proofing our app for when we will be reading doubles!</p>
+<p>Copy the <em>ScannerInput.java</em> class that you wrote in ShopV5.0 and paste it into your <em>src</em> folder of the DVDLibraryV3.0 app.  For your convenience, we have included it <a href="archives/ScannerInput.java">here</a>.</p>
+<p>Each time you read an <em>int</em> in the Driver class, replace it with a call to the ScannerInput method instead (just like you did with the Shop app) e.g.</p>
+<p>this int read:</p>
+<pre><code class="lang-java">System.out.print(&quot;Index of dvd to edit ==&gt;&quot;);
+int index = input.nextInt();</code></pre>
+<p>becomes:</p>
+<pre><code class="lang-java">int index = ScannerInput.readNextInt(&quot;Index of dvd to edit ==&gt;&quot;);</code></pre>
+<p>Now your program won&#39;t crash if you enter, say, a letter, when the app is expecting an int.</p>
+<p>Don&#39;t forget to remove any of those dummy reads (i.e. input.nextLine(); ) that we put in to cater for the Scanner bug.</p>
+<p>Rerun and test your app to make sure all is ok.  Your app should be more robust now and shouldn&#39;t crash when invalid numeric data is entered.  </p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Solutions">
+            <h1>Solutions</h1>
+<p>The interim solution to ShopV5.0 with the input execption handling <a href="archives/ShopV5.0-interim.zip">is here</a>.</p>
+<p>The solution to ShopV5.0 without the scanner bug <a href="archives/ShopV5.0-NoScannerBug.zip">is here</a>.</p>
+<p>The final solution to the ShopV5.0 with the ScannerInput utility class <a href="archives/ShopV5.0.zip">is here</a>.</p>
+<p>The solution to DVD phase 3 <a href="archives/DVDLibraryV3.0.zip">is here</a>.</p>
+
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+  <br>
+  <script>
+    $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+    $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+  </script>
+
+
+
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right small menu">
+      <div class="ui tiny basic message segment">
+         Powered by <a href="https://github.com/edeleastar/tutors-ts">tutors-ts.</a> 
+      </div>
+    </div>
+  </div>
+
+  </body>
+
+</html>
