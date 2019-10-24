@@ -115,28 +115,28 @@ html, body {
           02
         </a>
       
-        <a class="item" data-tab="Artist">
-          Artist
+        <a class="item" data-tab="EUDriver">
+          EUDriver
         </a>
       
-        <a class="item" data-tab="ArtistList">
-          ArtistList
+        <a class="item" data-tab="Mep">
+          Mep
         </a>
       
-        <a class="item" data-tab="Song">
-          Song
+        <a class="item" data-tab="Party">
+          Party
         </a>
       
-        <a class="item" data-tab="SongList">
-          SongList
+        <a class="item" data-tab="Country">
+          Country
         </a>
       
-        <a class="item" data-tab="Driver">
-          Driver
+        <a class="item" data-tab="PartyList">
+          PartyList
         </a>
       
-        <a class="item" data-tab="Truncating">
-          Truncating
+        <a class="item" data-tab="Utilities">
+          Utilities
         </a>
       
         <a class="item" data-tab="JUnit">
@@ -165,20 +165,6 @@ html, body {
           
             <a class="item"
                href="/topic00-assignments/book-a/index.html">Assignment1 </a>
-          
-        
-      
-        
-          
-            <a class="item"
-               href="/topic00-assignments/book-b/index.html">Assignment2 </a>
-          
-        
-      
-        
-          
-            <a class="item"
-               href="/topic00-assignments/book-c/index.html">RepeatAssignment </a>
           
         
       
@@ -303,18 +289,18 @@ html, body {
         
           <div class="ui tab segment lab" data-tab="02">
             <h1>The Assignment</h1>
-<p>You are tasked with developing a <em>SongifyApp</em>.  </p>
-<p>This <em>SongifyApp</em> will have five classes:</p>
+<p>You are tasked with developing a <em>EUApp</em>.  </p>
+<p>This <em>EUApp</em> will have five classes:</p>
 <ul>
-<li><p><em>Artist</em>:  The responsibility for this class is to manage a single Artist. </p>
+<li><p><em>Party</em>:  The responsibility for this class is to manage a single (political) party. </p>
 </li>
-<li><p><em>ArtistList</em>: The responsibility for this class is to store and manage ALL the artists entered by the user via the console.</p>
+<li><p><em>PartyList</em>: The responsibility for this class is to store and manage aLL the parties  entered by the user via the console (that are parties in the EU)</p>
 </li>
-<li><p><em>Song</em>:  The responsibility for this class is to manage a single Song.  Note that a song, in our app, has ONE artist associated with it. </p>
+<li><p><em>MEP</em>:  The responsibility for this class is to manage a single MEP (Member of European Parliament).  </p>
 </li>
-<li><p><em>SongList</em>: The responsibility for this class is to store and manage ALL the songs entered by the user via the console.</p>
+<li><p><em>Country</em>: The responsibility for this class is to store and manage ALL the songs entered by the user via the console.</p>
 </li>
-<li><p><em>Driver</em>: The responsibility for this class is to manage the User Interface (UI) i.e. the menu and user input/ouput.</p>
+<li><p><em>EUDriver</em>: The responsibility for this class is to manage the User Interface (UI) i.e. the menu and user input/ouput.</p>
 </li>
 </ul>
 <p>The instructions for developing the app and the above classes are on the following tabs. </p>
@@ -336,284 +322,242 @@ html, body {
 
           </div>
         
-          <div class="ui tab segment lab" data-tab="Artist">
-            <h1>Artist class</h1>
-<p>The UML for the Artist class is here:</p>
-<p><img src="img/02.png" alt=""></p>
-<p>The responsibility for this class is to manage a single Artist. </p>
-<h2>Fields</h2>
-<p>There are three private fields in the Artist class.  The validation on these fields is as follows:</p>
-<ul>
-<li><p><em>artistName</em>: The artist name is maximum 30 characters.</p>
-</li>
-<li><p><em>artistEmail</em>:  must contain a <strong><em>@</em></strong> and a <strong><em>.</em></strong>.  If it doesn&#39;t, store &quot;invalid format email&quot;.</p>
-</li>
-<li><p><em>artistPhone</em>: should only contain numbers.  If it contains any characters other than numbers, store &quot;unknown&quot;.</p>
-</li>
-</ul>
-<h2>Constructor</h2>
-<p>There is one constructor that should have the same method signature as the diagram above.  The constructor should enforce the validation rules outlined for each field above.</p>
-<h2>Methods (getters and setters)</h2>
-<p>Each of the above fields will have a getter and a setter.  The setters should adhere to the validation rules outlined above.  Remember that a setter should not apply a default value i.e. if an invalid email is entered, do not overwrite the existing stored email with &quot;invalid format email&quot;.</p>
-<h2>Methods (toString)</h2>
-<p>Your toString should adhere to the following format:</p>
-<p><img src="img/07.png" alt=""></p>
-
-          </div>
-        
-          <div class="ui tab segment lab" data-tab="ArtistList">
-            <h1>ArtistList class</h1>
-<p>The UML for the ArtistList class is here:</p>
-<p><img src="img/03.png" alt=""></p>
-<h2>Fields</h2>
-<p>There is one private field in the ArtistList class, <em>artists</em>.  This is an ArrayList of Artist.  There is no validation on this field.  It should be instantiated at declaration time.  </p>
-<h2>Constructor</h2>
-<p>We will use the default constructor for this class (no need to code it).  For this reason, there is no constructor shown in the diagram above.</p>
-<h2>Methods (getters and setters)</h2>
-<p>There are no getter or setter for the instance field <em>artists</em>.  Instead, we will use the below methods to manage the ArrayList.</p>
-<h2>Methods (addArtist)</h2>
-<p>This method will add an Artist object (passed as a parameter) to the ArrayList <em>artists</em>.  There is no validation in this method.</p>
-<h2>Methods (getArtist)</h2>
-<p>This method will return an Artist object at the location <em>index</em>, which is passed as a paramter.  There is some validation in this method:</p>
-<ul>
-<li>Check that the passed index exists in the ArrayList, before accessing the ArrayList.</li>
-<li>If the passed index is not valid, return <em>null</em>. </li>
-</ul>
-<h2>Methods (numberOfArtists)</h2>
-<p>This method returns the number of Artist objects stored in the ArrayList <em>artists</em>.</p>
-<h2>Methods (removeArtist)</h2>
-<p>This method removes an Artist object at the location <em>index</em>, which is passed as a paramter.  There is some validation in this method (same as in getArtist method above):</p>
-<ul>
-<li>Check that the passed index exists in the ArrayList, before accessing the ArrayList.</li>
-<li>If the passed index is not valid, return <em>false</em>. </li>
-</ul>
-<h2>Methods (listOfArtists)</h2>
-<p>This method is similar-ish to a toString.<br>It builds (and returns) a String of all Artist objects in the ArrayList.  Each object is on a new line.  The beginning of the line has the index number of the object in the ArrayList i.e.:</p>
-<p><img src="img/08.png" alt=""></p>
-<p>If there are no artists in the ArrayList, the following message should be returned:  <strong>There are no artists in the list</strong>.</p>
-<h2>Methods (save)</h2>
-<p>This method saves all Artist objects from the ArrayList artists to an XML file <em>artists.xml</em>.  You can use the <em>xstream</em> component for this (like we did in class) or any approach you wish.</p>
-<h2>Methods (load)</h2>
-<p>This method loads all saved Artist objects back into the program (i.e into the ArrayList artists) from the XML file <em>artists.xml</em>.  You can use the <em>xstream</em> component for this (like we did in class) or any approach you wish.</p>
-
-          </div>
-        
-          <div class="ui tab segment lab" data-tab="Song">
-            <h1>Song class</h1>
-<p>The UML for the Song class is here:</p>
-<p><img src="img/04.png" alt=""></p>
-<p>The responsibility for this class is to manage a single Song. </p>
-<h2>Fields</h2>
-<p>There are four private fields in the Song class.  The validation on these fields is as follows:</p>
-<ul>
-<li><p><em>songName</em>: The song name is maximum 30 characters.</p>
-</li>
-<li><p><em>songGenre</em>: must be one of the following:</p>
-<ul>
-<li>Rock</li>
-<li>Pop</li>
-<li>Blues</li>
-<li>Rap</li>
-<li>Dance</li>
-<li>Classical</li>
-<li>unknown (if any of the above hasn&#39;t be entered by the user)</li>
-</ul>
-</li>
-<li><p><em>songLength</em>: stored as seconds.  Must be between 10 and 1,200 inclusive.  If it is outside of this range, a default of 0 is applied.</p>
-</li>
-<li><p><em>artist</em>: as we cannot have a null value stored in this variable, we will do the following validation on it:</p>
-<ul>
-<li>if the artist is not null, store this value.</li>
-<li>if the artist IS null, create a new artist object with an artist name of <em>unknown</em>, an email of <em>invalid format email</em>, and a phone of <em>unknown</em>.</li>
-</ul>
-</li>
-</ul>
-<h2>Constructor</h2>
-<p>There is one constructor that should have the same method signature as the diagram above.  The constructor should enforce the validation rules outlined for each field above.</p>
-<h2>Methods (getters and setters)</h2>
-<p>Each of the above fields will have a getter and a setter.  The setters should adhere to the validation rules outlined above.  Remember that a setter should not apply a default value i.e. if an invalid genre is entered, do not overwrite the existing stored genre with &quot;unknown&quot;.</p>
-<h2>Methods (toString)</h2>
-<p>Your toString should adhere to the following format:</p>
-<p><img src="img/09.png" alt=""></p>
-<p>Note how the song length is not displayed in seconds...it is converted to minutes and seconds.  Hint: use modulo operator (%) for this.</p>
-
-          </div>
-        
-          <div class="ui tab segment lab" data-tab="SongList">
-            <h1>SongList Class</h1>
-<p>The UML for the SongList class is here:</p>
-<p><img src="img/05.png" alt=""></p>
-<p>Note: There are a lot of similarities, structure-wise, between ArtistList and SongList. </p>
-<h2>Fields</h2>
-<p>There is one private field in the SongList class, <em>songs</em>.  This is an ArrayList of Songs.  There is no validation on this field.  It should be instantiated at declaration time.  </p>
-<h2>Constructor</h2>
-<p>We will use the default constructor for this class (no need to code it).  For this reason, there is no constructor shown in the diagram above.</p>
-<h2>Methods (getters and setters)</h2>
-<p>There are no getter or setter for the instance field <em>songs</em>.  Instead, we will use the below methods to manage the ArrayList.</p>
-<h2>Methods (addSong)</h2>
-<p>This method will add a Song object (passed as a parameter) to the ArrayList <em>songs</em>.  There is no validation in this method.</p>
-<h2>Methods (getSong)</h2>
-<p>This method will return an Song object at the location <em>index</em>, which is passed as a paramter.  There is some validation in this method:</p>
-<ul>
-<li>Check that the passed index exists in the ArrayList, before accessing the ArrayList.</li>
-<li>If the passed index is not valid, return <em>null</em>. </li>
-</ul>
-<h2>Methods (removeSong)</h2>
-<p>This method removes a Song object at the location <em>index</em>, which is passed as a paramter.  There is some validation in this method (same as in getArtist method in the ArtistList class):</p>
-<ul>
-<li>Check that the passed index exists in the ArrayList, before accessing the ArrayList.</li>
-<li>If the passed index is not valid, return <em>false</em>. </li>
-</ul>
-<h2>Methods (numberOfSongs)</h2>
-<p>This method returns the number of Song objects stored in the ArrayList <em>songs</em>.</p>
-<h2>Methods (listOfSongs)</h2>
-<p>This method is similar-ish to a toString.<br>It builds (and returns) a String of all Song objects in the ArrayList.  Each object is on a new line.  The beginning of the line has the index number of the object in the ArrayList i.e.:</p>
-<p><img src="img/10.png" alt=""></p>
-<p>If there are no songs in the ArrayList, the following message should be returned:  <strong>There are no songs in the list</strong>.</p>
-<h2>Methods (listSongsBySpecificGenre)</h2>
-<p>This method builds (and returns) a String of all Song objects in the ArrayList whose <em>genre</em> matches the one passed as a parameter.  Each object is on a new line i.e.:</p>
-<p><img src="img/11.png" alt=""></p>
-<p>If there are no songs in the ArrayList, the following message should be returned:  <strong>There are no songs stored in the list</strong>.</p>
-<p>If there are songs in the ArrayList but none of them have the genre entered by the user (i.e. passed as a parameter), then the following message should be returned:  <strong>&quot;There are no songs with the genre: &quot; + genre</strong></p>
-<p>Note: cater for case sensitivity in your searches i.e. Rock, ROCK, rock should be the same for search purposes (see screen shot above). </p>
-<h2>Methods (listSongsBySpecificArtist)</h2>
-<p>This method builds (and returns) a String of all Song objects in the ArrayList whose <em>artistName</em> matches the one passed as a parameter.  Each object is on a new line i.e.:</p>
-<p><img src="img/12.png" alt=""></p>
-<p>If there are no songs in the ArrayList, the following message should be returned:  <strong>There are no songs stored in the list</strong>.</p>
-<p>If there are songs in the ArrayList but none of them are by the artistName entered by the user (i.e. passed as a parameter), then the following message should be returned:  <strong>&quot;There are no songs for the artist: &quot; + artist</strong></p>
-<p>Remember to cater for case-sensitive searches. </p>
-<h2>Methods (longestSong)</h2>
-<p>This method returns the Song object that has the longest <em>songLength</em> in the ArrayList.  If there are no songs stored in the ArrayList, null should be returned. </p>
-<h2>Methods (averageSongLength)</h2>
-<p>This method returns average <em>songLength</em> in the ArrayList.  </p>
-<p>If there are no songs stored in the ArrayList, zero should be returned. </p>
-<p>Hint: avoid a <em>divide by zero</em> exception in this method by only dividing if there are Songs stored in the ArrayList.</p>
-<h2>Methods (lengthOfAllSongs)</h2>
-<p>This method returns a running total of the <em>songLength</em> for all Songs stored in the ArrayList.  If there are no Songs stored, zero should be returned.</p>
-<h2>Methods (save)</h2>
-<p>This method saves all Song objects from the ArrayList songs to an XML file <em>songs.xml</em>.  You can use the <em>xstream</em> component for this (like we did in class) or any approach you wish.</p>
-<h2>Methods (load)</h2>
-<p>This method loads all saved Song objects back into the program (i.e into the ArrayList songs) from the XML file <em>songs.xml</em>.  You can use the <em>xstream</em> component for this (like we did in class) or any approach you wish.</p>
-
-          </div>
-        
-          <div class="ui tab segment lab" data-tab="Driver">
+          <div class="ui tab segment lab" data-tab="EUDriver">
             <h1>Driver class</h1>
-<p>The UML for the Driver class is here:</p>
-<p><img src="img/06.png" alt=""></p>
+<p>The UML for the EuDriver class is here:</p>
+<p><img src="img/EUDriver.png" alt=""></p>
 <p>The responsibility of this class is to run the app and perform I/O with the user.  It is the only class that should have:</p>
 <ul>
 <li>System.out.print statements</li>
 <li>Scanner objects defined. </li>
 </ul>
 <h2>Fields</h2>
-<p>There are three private fields in the <em>Driver</em> class:</p>
+<p>There are three private fields in the <em>EUDriver</em> class:</p>
 <ul>
 <li><strong>input</strong>: This is an object of the <em>Scanner</em> class.  </li>
-<li><strong>artistList</strong>:  This is an object of the <em>ArtistList</em> class. </li>
-<li><strong>songList</strong>: This is an object of the <em>SongList</em> class. </li>
+<li><strong>euCountries</strong>:  This is a collection (ArrayList) of the  <em>Country</em> class. </li>
+<li><strong>partyList</strong>: This is an object of the <em>PartyList</em> class. </li>
 </ul>
 <p>Instantiate each of these fields at variable declaration time.  Also, there is no validation on any of these fields.</p>
 <h2>main method</h2>
 <p>The main method has one line of code:</p>
-<pre><code>new Driver();</code></pre>
+<pre><code>new EUDriver();</code></pre>
 <h2>Constructor</h2>
-<p>We will write a default constructor for this class.  There is one line of code in this method:</p>
-<pre><code>   runMenu();</code></pre>
+<p>We will write a default constructor for this class.  There is two lines of code in this method:</p>
+<pre><code>public EUDriver() {
+   euCountries = new ArrayList&lt;Country&gt;();
+   runMenu();  }</code></pre>
+<p>We will also write a second constructor for this class. This is for use with tests (when we do not need to run the <strong>runMenu()</strong> method)</p>
+<pre><code>public EUDriver(int i) {
+   euCountries = new ArrayList&lt;Country&gt;();
+}</code></pre>
 <h2>Menu Displayed</h2>
 <p>Using the same approach adopted when deveoping the Shop projets, the following menu is <em>continually</em> displayed to the user: </p>
-<p><img src="img/13.png" alt=""></p>
+<p><img src="img/menuDriver.png" alt=""></p>
 <p>Note that the <em>mainMenu()</em> method displays the above menu and returns the user choice.  The <em>runMenu</em> method is the one that contains the switch statement that processes the user choice.  </p>
-<h2>Option 1 - Add an Artist</h2>
-<p>Create an <em>addArtist()</em> method in Driver.  This method asks the user to enter the artist name, email and phone number.  The entered Artist is then stored in the ArrayList of Artists (i.e. in the ArtistList class). </p>
-<p><img src="img/option1.png" alt=""></p>
-<h2>Option 2 - List all Artists</h2>
-<p>Calls the <em>listOfArtists</em> method in the <em>artistList</em> class.  The String that is returned is printed to the console.</p>
-<p><img src="img/option2.png" alt=""></p>
-<h2>Option 3 - Remove an Artist (by index)</h2>
-<p>Create a <em>deleteArtist()</em> method in Driver.  This method lists all the artists (hint: we used this method in option 2).  If there are:</p>
+<h2>Option 1 - Add a Country</h2>
+<p>Create an <em>addCountry()</em> method in Driver.  This method asks the user to enter the country name, and number of seats.  The entered country is then stored in the ArrayList of coutries (i.e. euCountries). </p>
+<h2>Option 2 - Delete a country</h2>
+<p>Create an <em>deleteCountry()</em> method in Driver.  This method firstly lists the currently stored euCountries and then asks the user to enter the index of the country to be deleted.  If possible, the country is deleted, otherwise print &quot;There is no Country for this index number&quot; to the console</p>
+<h2>Option 3 -Update a country (by index)</h2>
+<p>Create an <em>updateCountry()</em> method in Driver.  This method lists all the countries (hint: we used this method in option 2).  If there are:</p>
 <ul>
-<li><p>artists in the list, ask the user to enter the index number of the artist to delete.  Then, provided that the index number is valid, the Artist is deleted from the list. </p>
+<li><p>countries in the list, ask the user to enter the index number of the country to update.  Then, provided that the index number is valid, the Country&#39;s details are changed to the values that the user inputs.  </p>
 </li>
-<li><p>no artists in the list, the following message is displayed:  There is no artist for this index number.</p>
+<li><p>no countries in the list, the following message is displayed:  &quot;There is no Country for this index number&quot;</p>
 </li>
 </ul>
-<p><img src="img/option3.png" alt=""></p>
-<h2>Option 4 - Add a song</h2>
-<p>Create an <em>addSong()</em> method in Driver.<br>This method first asks the user to enter the song name, genre, length of the song in minutes and length of the song in seconds.</p>
-<p>Then the list of artists are displayed and the user selects the index number for the artist that wrote the song.  If there are no artists in the system, the user should now be asked to enter the artist details.  </p>
-<p>The song is then stored in the  ArrayList of Songs (i.e. in the SongList class). </p>
-<p>Note: you will need to store the length of the song in seconds, so you will have to convert the minutes and seconds into one <em>seconds</em> value.</p>
-<p><img src="img/option4.png" alt=""></p>
-<h2>Option 5 - List all songs</h2>
-<p>Calls the <em>listOfSongs</em> method in the <em>songList</em> class.  The String that is returned is printed to the console.</p>
-<p><img src="img/option5.png" alt=""></p>
-<h2>Option 6 - List all songs in a genre</h2>
-<p>Create a <em>listSongByGenre()</em> method in Driver.  The method should ask the user to enter the genre (i.e. ROCK, POP, BLUES, RAP, DANCE, CLASSICAL).  It then calls the <em>listSongsBySpecificGenre</em> method in the SongList class and prints the returned String to the console.</p>
-<p><img src="img/option6.png" alt=""></p>
-<h2>Option 7 - List all songs by artist</h2>
-<p>Create a <em>listSongByArtist()</em> method in Driver.  The method should ask the user to enter the name of the artist to search by.  It then calls the <em>listSongsBySpecificArtist</em> method in the SongList class and prints the returned String to the console.</p>
-<p>Note: partial names should return results i.e. <em>Joh</em> should return <em>John Flynn</em> and <em>Johanna</em>. </p>
-<p><img src="img/option7.png" alt=""></p>
-<h2>Option 8 - List song statistics</h2>
-<p>Create a <em>listSongStats()</em> method in Driver.  </p>
-<p>This method should print out the average song length and the length of all songs (these methods are written in the SongList class).  The output should be converted from seconds to be of the format (mm:ss).  </p>
-<p>Finally, the details of the longest song should be displayed. </p>
-<p><img src="img/option8.png" alt=""></p>
-<h2>Option 9 - Remove a song (by index)</h2>
-<p>Create a <em>deleteSong()</em> method in Driver.  This method lists all the songs (hint: we used this method in option 5).  If there are:</p>
+<h2>Option4</h2>
+<p>Calls the <em>listOfCountries</em> method. This method shoulld return (as a String), the list of countries currently registered as EU members.  The String that is returned is printed to the console.</p>
+<h2>Within a Country</h2>
+<h2>Option 5 - Add an MEP</h2>
+<p>Create an <em>addMEP()</em> method in Driver.<br>This method first asks the user to enter the MEP name, phone number, email, and party. </p>
+<p>The song is then stored in the  ArrayList of countries (i.e. euCountries). </p>
+<h2>Option 6 - Delete an MEP</h2>
+<p>Calls the <em>deleteMEP()</em> method in the <em>euDriver</em> class. 
+This method firstly lists the currently stored euCountries and then asks the user to enter the index of the country from where the MEP is to be deleted. If this country exists, then the lsit of current MEP&#39;s  in this country is printed to the console. The user is then asked for the index of the  MEP to be deleted. If it&#39;s a valid index, then the MEP is deleted, otherwise print &quot;There is no MEP for this index number&quot; to the console</p>
+<h2>Option 7 - Update an MEP</h2>
+<p>Create an <em>updateMEP()</em> method in Driver.  This method lists all the MEPs.  If there are:</p>
 <ul>
-<li><p>songs in the list, ask the user to enter the index number of the song to delete.  Then, provided that the index number is valid, the Song is deleted from the list. </p>
+<li><p>MEPs in the list, ask the user to enter the index number of the country to update.  Then, provided that the index number is valid, the MEP&#39;s details are changed to the values that the user inputs.  </p>
 </li>
-<li><p>no songs in the list, the following message is displayed:  There is no song for this index number.</p>
+<li><p>no MEPs in the list, the following message is displayed:  &quot;There is no MEP for this index number&quot;</p>
 </li>
 </ul>
-<p><img src="img/option9.png" alt=""></p>
-<h2>Option 10 - Save to XML</h2>
-<p>This method will save both lists (the artists and the songs) to an XML file. </p>
-<h2>Option 11 - Load from XML</h2>
-<p>This method will load both lists (the artists and the songs) form the XML file that was created in Option 10. </p>
+<h2>Option 8 - List all MEPs by country</h2>
+<p>Create a <em>listMEPSOfCountry()</em> method in Driver.  The method should ask the user to enter the country.  The String that is returned is printed to the console.</p>
+<h2>Party Menu</h2>
+<h2>Option 9 Add a new Party</h2>
+<p>Create an <em>addParty()</em> method in Driver.<br>This method first asks the user to enter the Party  name, leader, genre (one of &quot;RIGHT&quot;, &quot;LEFT&quot;, &quot;EXTREME RIGHT&quot;, &quot;EXTREME LEFT&quot;, &quot;CENTRE&quot;, or &quot;UNCATEGORISED&quot;), and number of local representatives. </p>
+<p>The party is then added to the PartyList collection using the <em>addParty</em> method in PartyList.</p>
+<h2>Option 10 - Delete a Party</h2>
+<p>Calls the <em>deleteParty()</em> method in the <em>euDriver</em> class. 
+This method firstly lists the currently stored parties in the partylist object and then asks the user to enter the index of the party to be deleted.  If it&#39;s a valid index, then the party is deleted, otherwise print &quot;There is no party for this index number&quot; to the console</p>
+<h2>Option 11 Update a Party</h2>
+<p>Create an <em>updateParty</em> method in Driver.  This method lists all the Party&#39;s.  If there are:</p>
+<ul>
+<li><p>party&#39;s in the list, ask the user to enter the index number of the party to update.  Then, provided that the index number is valid, the party&#39;s details are changed to the values that the user inputs.  </p>
+</li>
+<li><p>no Party&#39;s in the list, the following message is displayed:  &quot;There is no Party for this index number&quot;</p>
+</li>
+</ul>
+<h2>Option 12 - List all Parties</h2>
+<p>Create a <em>listOfParties()</em> method in the PartyList class.  This method lists all the parties. This method shoud return a String which is then printed to the console. </p>
+<h2>Reporting Menu</h2>
+<h2>Option 13 - Calculate and print the party with the most local Representatives</h2>
+<p>Create a <em>largestParty()</em> method in the PartyList class.  This method calculate the party with the largest number of local representatives. This method shoud return this Party(object) which is then printed to the console (using toString())</p>
+<h2>Option 14 - Calculate and print the party with the most MEP&#39;s</h2>
+<p>Create a <em>mostMEPs()</em> method in the PartyList class.  This method calculate the party with the largest number of MEPs. This method shoud return this Party(object) which is then printed to the console (using toString())</p>
+<h2>Option 15 - List all parties of a given Genre</h2>
+<p>Create a <em>listPartyByGenre()</em> method in the Driver class.  This method should invite the user to enter the genre. This method  will then call a PartyList method (you should write) called <em>listPartiesBySpecificGenre</em> which returns the list a a String.   It is then printed to the console.</p>
+<h2>Option 16 -  List all MEPs of a given party</h2>
+<p>Create a <em>listMEPsbyPartyName()</em> method in the Driver class.  This method should invite the user to enter the party name. This method  will then call a PartyList method (you should write) called <em>listMEPsbySpecificParty</em> which returns the list a a String. It is then printed to the console.</p>
+<h2>Option 20 - Save to XML</h2>
+<p>This method will save both lists (the euCountries and the partyList)  to an XML file. </p>
+<h2>Option 21 - Load from XML</h2>
+<p>This method will load both lists (the euCountries and the partyList) form the XML file that was created in Option 10. </p>
 <h2>Option 0 - Exit</h2>
 <p>This option exits the application.  </p>
 
           </div>
         
-          <div class="ui tab segment lab" data-tab="Truncating">
-            <h1>Formatting decimal output</h1>
-<p>If you want to truncate a double field to two decimal places, you can adopt this approach (i.e. when calculating the average song length).</p>
+          <div class="ui tab segment lab" data-tab="Mep">
+            <h1>Mep class</h1>
+<p>The UML for the Mep class is here:</p>
+<p><img src="img/Mep.png" alt=""></p>
+<p>The responsibility for this class is to manage a single MEP (Member of European Parliament). </p>
+<h2>Fields</h2>
+<p>There are four private fields in the MEP class.  The validation on these fields is as follows:</p>
 <ul>
-<li>Add the following helper method to the SongList class:</li>
-</ul>
-<pre><code>    private double toTwoDecimalPlaces(double num){
-        return (int) (num *100 ) /100.0; 
-    }</code></pre>
-<ul>
-<li>This method:<ul>
-<li>takes in a parameter (called <em>num</em>) e.g. 45.76899765</li>
-<li>multiplies it by 100 e.g. 4576.899765</li>
-<li>casts it as an int e.g. 4576</li>
-<li>divides it by 100 e..g 45.76</li>
-<li>and returns this value truncated to two decimal places.</li>
-</ul>
+<li><p><em>MEPName</em>: The MEP name is maximum 30 characters.</p>
+</li>
+<li><p><em>MEPEmail</em>:  must contain a <strong><em>@</em></strong> and a <strong><em>.</em></strong>.  If it doesn&#39;t, store &quot;invalid format email&quot;.</p>
+</li>
+<li><p><em>MEPPhone</em>: should only contain numbers.  If it contains any characters other than numbers, store &quot;unknown&quot;.</p>
+</li>
+<li><p><em>MEPParty</em>: This party should be from the current partyList in the Driver.</p>
 </li>
 </ul>
+<h2>Constructor</h2>
+<p>There is one constructor that should have the same method signature as the diagram above.  The constructor should enforce the validation rules outlined for each field above. The constructor needs the current set of party lists so that the party can be validated. </p>
+<h2>Methods (getters and setters)</h2>
+<p>Each of the above fields will have a getter and a setter.  The setters should adhere to the validation rules outlined above.  Remember that a setter should not apply a default value i.e. if an invalid email is entered, do not overwrite the existing stored email with &quot;invalid format email&quot;.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Party">
+            <h1>Party class</h1>
+<p>The UML for the party class is here:</p>
+<p><img src="img/party.png" alt=""></p>
+<p>The responsibility for this class is to manage a single (political) party. </p>
+<h2>Fields</h2>
+<p>There are four private fields in the Party class.  The validation on these fields is as follows:</p>
 <ul>
-<li>Given the following sample code:</li>
-</ul>
-<pre><code class="lang-java">
-    public double calculateSomething(){
-        return ( value / anotherValue );
-    }</code></pre>
+<li><p><em>partyName</em>: The party name is maximum 30 characters.</p>
+</li>
+<li><p><em>partyGenre</em>: must be one of the following:</p>
 <ul>
-<li>We can use the <strong>toTwoDecimalPlaces</strong> method to truncate the result to two decimal places:</li>
+<li>RIGHT</li>
+<li>LEFT</li>
+<li>EXTREME RIGHT</li>
+<li>EXTREME LEFT</li>
+<li>CENTRE</li>
+<li>UNCATEGORISED</li>
+<li><p>unknown (if any of the above hasn&#39;t be entered by the user)</p>
+<p>When using the setter for this field, the setter to allow change if genre is correct or correct with incorrect case (e.g. leFT), otherwise remain unchanged.</p>
+</li>
 </ul>
-<pre><code class="lang-java">
-    //When returning the result of a calculation, we want to call our 
-    //new toTwoDecimalPlaces method to truncate the result to two decimal places:
-    public double calculateSomething(){
-        return toTwoDecimalPlaces(  value / anotherValue );
+</li>
+<li><p><em>numLocalReps</em>: the number of local representatives a party has (e.g. in Ireland-  the number of TDs, in UK - the number of MPs etc). This should be non-negative.</p>
+</li>
+</ul>
+<h2>Constructor</h2>
+<p>There is one constructor that should have the same method signature as the diagram above.  The constructor should enforce the validation rules outlined for each field above.</p>
+<h2>Methods (getters and setters)</h2>
+<p>Each of the above fields will have a getter and a setter.  The setters should adhere to the validation rules outlined above.  Remember that a setter should not apply a default value i.e. if an negative value for <em>numLocalReps</em> is entered, do not overwrite the existing stored <em>numLocalReps</em>. toString() should also be written. </p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Country">
+            <h1>Country class</h1>
+<p>The UML for the country class is here:</p>
+<p><img src="img/country.png" alt=""></p>
+<p>The responsibility for this class is to manage a single country.</p>
+<h1>Fields</h1>
+<p>There are three private fields in the MEP class.  The validation on these fields is as follows:</p>
+<ul>
+<li><p><em>name</em>: The country  name is maximum 30 characters.</p>
+</li>
+<li><p><em>meps</em>:  A collection (ArrayList) of Mep&#39;s. </p>
+</li>
+<li><p><em>noMEPs</em>: This is the (max) number of Mep&#39;s that a country is allowed. This should be non-negative.</p>
+</li>
+</ul>
+<h2>Constructor</h2>
+<p>There is one constructor that should have the same method signature as the diagram above.  The constructor should enforce the validation rules outlined for each field above.</p>
+<h2>Methods (getters and setters)</h2>
+<p>Each of the above fields will have a getter and a setter.  The setters should adhere to the validation rules outlined above.  Remember that a setter should not apply a default value. the toString() shoould be written.</p>
+<h2>addMEP(Mep mep)</h2>
+<p>This should add an Mep to this Country</p>
+<h2>getMEP(int i)</h2>
+<p>this should return the Mep object at this position (if it exists), null otherwise. </p>
+<h2>removeMEP(int i)</h2>
+<p>this should remove the Mep object at position i (if it exists). If a sucessful delete takes place, then return true, otherwise false. </p>
+<h2>numberOfMEPs()</h2>
+<p>this should  return the number of MEP&#39;s currently added to this Country</p>
+<h2>listOfMEPs()</h2>
+<p>this should return (as a String) the list of MEPs currently added to this Country</p>
+<h2>listOfMEPsByParty(Party party)</h2>
+<p>this should return (as a String) the list of MEPs currently added to this Country that are members of the supplied Party.</p>
+<h2>noOfMEPsByParty(Party party)</h2>
+<p>this should return the number of MEPs currently added to this Country that are members of the supplied Party. </p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="PartyList">
+            <h1>PartyList class</h1>
+<p>The UML for the PartyList class is here:</p>
+<p><img src="img/partyList.png" alt=""></p>
+<p>The responsibility for this class is to manage a single PartyList.</p>
+<h1>Fields</h1>
+<p>There is one private field in the PartyList class.  No validation here.</p>
+<ul>
+<li><em>parties</em>: </li>
+</ul>
+<h2>Constructor</h2>
+<p>There is one constructor that should have the same method signature as the diagram above.  The constructor should enforce the validation rules outlined for each field above.</p>
+<h2>Methods (getters and setters)</h2>
+<p>The above field will have a getter and a setter. You should write a toString().</p>
+<h2>addParty(Party party)</h2>
+<p>This should add the given party to the PartyList.</p>
+<h2>getParty(int index)</h2>
+<p>This should return the Party object at the index position (if it exists), null otherwise. </p>
+<h2>removeParty(int index)</h2>
+<p>This should remove the Party object at the index position (if it exists) and return true, return false otherwise (if index is invalid).</p>
+<h2>numberOfParties()</h2>
+<p>This should return the current number of parties in the PartyList.</p>
+<h2>listOfParties()</h2>
+<p>This should return (as a String) the list of parties currently added to the PartyList.</p>
+<h2>listPartiesBySpecificGenre(String genre)</h2>
+<p>This should return (as a String) the current list of parties which have the given genre. </p>
+<h2>largestParty()</h2>
+<p>This should return the Party object from the current list who has the largest number of local representatives. </p>
+<h2>mostMEPs(ArrayList<Country> euCOuntries)</h2>
+<p>This should return the party object which has the most MEPs in the euCountries collection.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Utilities">
+            <h1>Utilities class</h1>
+<p>The UML for the Utilities class is here:</p>
+<p><img src="img/utilities.png" alt=""></p>
+<p>The responsibility for this class is to manage a single Utilities.</p>
+<p>For details on the utilities methods, examine the test classes. </p>
+<h2>onlyContainsNumbers(String text)</h2>
+<p>This method is given using regex. You may use this in your assignment. </p>
+<pre><code>    static boolean onlyContainsNumbers(String text) {
+          return (text.matches(&quot;[0-9]+&quot;));
     }</code></pre>
-<p>You can apply this approach to the <em>averageSongLength</em> method in the SongList class...the returned result can be truncated to two decimal places.</p>
 
           </div>
         
@@ -622,12 +566,15 @@ html, body {
 <p><strong>NOTE: YOU DO NOT HAVE TO DO THIS STEP IF YOU DON&#39;T WANT TO.  THERE ARE NO ADDITIONAL MARKS IN THE MARKING SCHEME FOR DOING THIS.  HOWEVER, IT WILL HELP YOU IDENTIFY AND FIX BUGS IN YOUR CODE, THEREBY INCREASING YOUR GRADE.</strong></p>
 <p>For correcting your assignments, we have written four automated test classes:</p>
 <ul>
-<li><em>SongTest</em>: This class exhaustively tests the methods in the Song class. </li>
-<li><em>ArtistTest</em>: This class exhaustively tests the methods in the Artist class. </li>
-<li><em>SongListTest</em>: This class tests all methods, except load and store in the SongList class. </li>
-<li><em>ArtistListTest</em>: This class tests all methods, except load and store in the ArtistList class</li>
+<li><em>PartyTest</em>: This class exhaustively tests the methods in the Party class. </li>
+<li><em>MepTest</em>: This class exhaustively tests the methods in the Mep class. </li>
+<li><em>PartyListTest</em>: This class tests all methods, except load and store in the PartyList class. </li>
+<li><em>CountryTest</em>: This class tests all methods, except load and store in the Countryclass</li>
+<li><em>UtilitiesTest</em>: This class tests all Utilities methods</li>
+<li><em>EUDriver</em> : This class tests most EUDriver methods. This will be updated in the coming week. </li>
+<li>We will be running these classes over your submitted assignment and correcting based on the results of the tests.  We are releasing them to you so that, prior to submitting your work, you can pre-correct your assignment and make changes / fix your code based on the output of the tests.</li>
 </ul>
-<p>We will be running these classes over your submitted assignment and correcting based on the results of the tests.  We are releasing them to you so that, prior to submitting your work, you can pre-correct your assignment and make changes / fix your code based on the output of the tests.</p>
+<p>The test classes are available <a href="archives/test.zip">here</a>. THese have been updated 24/10 to tidy up and add more tests to help you in EUDriver. </p>
 <p>The following steps will show you how to incorporate these into your assignment.</p>
 <h2>Creating a Test Folder</h2>
 <p>In your IntelliJ project, right click on your project name.  When the context menu appears, select <em>New --&gt; Directory</em>.  Call the new directory <em>test</em>.  </p>
@@ -637,9 +584,8 @@ html, body {
 <p><img src="img/15.png" alt=""></p>
 <p>Your <em>test</em> directory should now be green in colour.</p>
 <h2>Creating a test class</h2>
-<p>Right click on the <em>test</em> folder and choose <em>New --&gt; Java Class</em>.  Give the class the name, <em>SongTest</em>.  </p>
-<p>Delete any generated code in your new class and paste <a href="archives/SongTest.java">this code</a> into it instead.</p>
-<p>You will notice that a lot of errors exist in relation to the <em>JUnit</em> imports <em>annotations</em> and the <em>assert</em> methods:</p>
+<p>Instead of generating test classes, you should drag in the supplied test classes. </p>
+<p>You will notice that a lot of errors exist in the newly added test classes in relation to the <em>JUnit</em> imports <em>annotations</em> and the <em>assert</em> methods:</p>
 <p><img src="img/16.png" alt=""></p>
 <p>We need to add JUnit to our classpath so that these imports and methods can be recognised.  To do this, click on one of the JUnit imports that is causing an error.  Click on the red lightbulb that appears and then select <em>Add Junit4 to Classpath</em>:</p>
 <p><img src="img/17.png" alt=""></p>
@@ -685,13 +631,13 @@ html, body {
 </ul>
 <p>As you make changes to your code, keep running the tests to see your progress.  </p>
 <h2>Remaining test classes</h2>
-<p>Follow the same procedure as above to include the following three test classes:</p>
-<ul>
-<li><a href="archives/ArtistTest.java">ArtistTest.java</a>.</li>
-<li><a href="archives/SongListTest.java">SongListTest.java</a>.</li>
-<li><a href="archives/ArtistListTest.java">ArtistListTest.java</a>.</li>
-</ul>
-<p>Note: there is no automated test class for Driver.java as this one uses the console for input (i.e. keeps <em>interrupting</em> the program running).</p>
+<p>Follow the same procedure as above to include the remaining  test classes:</p>
+<p>Note: In order to run EUDriver test, we have used an alterative <em>EUDriver</em> constructor</p>
+<pre><code> public EUDriver(int x) {
+        euCountries = new ArrayList&lt;Country&gt;();
+      //  runMenu();
+    }</code></pre>
+<p>i.e. we don&#39;t run the menu as this waiting for input would interrupt the running of the tests. </p>
 
           </div>
         
@@ -699,11 +645,11 @@ html, body {
             <h1>Submitting your assignment</h1>
 <p>When you are ready to submit your assignment:</p>
 <ul>
-<li><p>Rename your project folder using the naming convention <strong>firstname_surname</strong> e.g. siobhan_drohan.</p>
+<li><p>Rename your project name using the naming convention <strong>firstname_surname</strong> e.g. maireaed_meagher. (inside IntelliJ)</p>
 </li>
 <li><p>Zip this folder ensuring that it is called  <strong>firstname_surname.zip</strong>.  No WINRARs please!</p>
 </li>
-<li><p>The deadline for this assignment is <strong>10 pm Friday 8th March, 2019</strong>.</p>
+<li><p>The deadline for this assignment is <strong>10 pm Sunday, 3rd November 2019</strong>.</p>
 </li>
 </ul>
 <h2>Interviews</h2>
@@ -717,15 +663,19 @@ html, body {
             <h1>Indicative Marking Scheme</h1>
 <p>The marking scheme for the assignment is broken into the following:</p>
 <ul>
-<li><p>Artist Class - 8%</p>
+<li><p>Mep Class - 8%</p>
 </li>
-<li><p>Song Class - 7%</p>
+<li><p>Party Class - 8%</p>
 </li>
-<li><p>ArtistList Class - 15%</p>
+<li><p>PartyList Class - 20%</p>
 </li>
-<li><p>SongList Class - 35%</p>
+<li><p>Country Class - 15%</p>
 </li>
-<li><p>Driver - 25%</p>
+<li><p>Driver (euApp) - 29%</p>
+</li>
+<li><p>Utilities Class 8%</p>
+</li>
+<li><p>ScannerInput 2%</p>
 </li>
 <li><p>Javadoc - 5%</p>
 </li>
@@ -734,18 +684,12 @@ html, body {
 </ul>
 <p>The above totals to 100%.</p>
 <h2>Extra Credit</h2>
-<p>Extras - 10% will be available to include extras like including exceptions throughout, robust error handling, etc. This 10% is only available if all other functionalities are attempted and will bring your mark to a maximum of 100%.  Good examples of extra credit functionality could be:</p>
-<ul>
-<li><p>to do a cascade delete on the Artist i.e. delete all the songs associated with the artist.  If attempting this, you might need to do a bit of research on the .equals() method.  </p>
-</li>
-<li><p>when adding an Artist to a Song, you might have noticed that you had to select an Artist from a list of pre-existing artists.  There was no option to allow the user to add a new Artist.  Instead, what you could do is allow the user to enter, say, -1 to add a new Artist.  </p>
-</li>
-</ul>
+<p>Extras - 10% will be available to include extras like including exceptions throughout, robust error handling, etc. This 10% is only available if all other functionalities are attempted and will bring your mark to a maximum of 100%.  </p>
 <p>Note: If you are making changes to the functionality, it may be the case that the tests will fail for that particular area.  In this case, you are permitted to update the tests to reflect this new functionality, but please include a README with your project to indicate that you have done this. </p>
 <h2>Interviews</h2>
 <p>The grade for the interview is a multiplier for your assigment grade.  Should you fail to show for your interview, you will receive zero, resulting in an overall grade of zero for your submission.</p>
 <h2>Use of JUnit when developing your code</h2>
-<p>If your code passes the JUnit tests provided, this means that you will automatically have 65% (interview permitting!).</p>
+<p>If your code passes the JUnit tests provided, this means that you will automatically have 65% (interview permitting!) (all &#39;tested&#39; methods add to 88% but not all driver methods are tested in tests).</p>
 <p>Use of the JUnit tests will significantly help you to improve your code. It is worth the effort of getting it up and running and will also be a help to you when we cover it more fully later in the semester. Go for it!</p>
 
           </div>
